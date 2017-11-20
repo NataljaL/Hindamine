@@ -54,7 +54,7 @@ test_error()
 success_msg("Good work!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:23abc9f934
-Indices and brackets
+## Indices and brackets
 
 Vectors in R store multiple values of the same data type. The values in vectors have indices: the first value in a vector has a index 1, the second value 2 and so on.
 
@@ -64,15 +64,15 @@ It is also possible to rearrange the values in a vector by using indices. Look a
 
 *** =instructions
 
-    Create the names vector.
-    See how the indices work by executing the example lines.
-    Use brackets and indices on names to create a new vector girls with values "Liisa" and "Anna" (in that order).
-    Use brackets and indices on names to create a new vector boys with values "Pekka" and "Heikki" (in that order).
+  *  Create the names vector.
+  *  See how the indices work by executing the example lines.
+  *  Use brackets and indices on names to create a new vector girls with values "Liisa" and "Anna" (in that order).
+  *  Use brackets and indices on names to create a new vector boys with values "Pekka" and "Heikki" (in that order).
 
 *** =hint
 
-    Note that space between the vector object and bracets produces an error.
-    Index vectors c(1,2) and c(2,1) do not produce the same outcome. The order of the values is different.
+  *  Note that space between the vector object and bracets produces an error.
+  *  Index vectors c(1,2) and c(2,1) do not produce the same outcome. The order of the values is different.
 
 *** =pre_exercise_code
 
