@@ -393,20 +393,20 @@ $$\frac{s}{\sqrt{n}}$$
 
 is called the standard error of the sample mean $\bar{x}$.
 
-I know what you're thinking. It's confusing: where did the normal distribution come from and what's with all that $z_{\alpha/2}$ stuff? The answers lie in the sampling distribution which we will soon get to.
+I know what you're thinking. It's confusing: where did the normal distribution come from and whats with all that $z_{\alpha/2}$ stuff? The answers lie in the sampling distribution which we will soon get to.
 
 *** =instructions
 
-    Create objects points, n, mu_hat and s
-    Adjust the code: Compute the standard error of mu_hat (the sample mean) and save t to object error. sqrt() computes the square root.
-    Compute the critical value z using a 99% confidence level (alpha = 0.01) and create object z
-    Compute the lower and upper limits of the confidence interval (CI) by applying the formula given above
-    Combine the point estimate and the lower and upper CI values to the object interval_estimate.
-    Print the values in interval_estimate, rounded to 1 digit (hint: round())
+  *  Create objects points, n, mu_hat and s
+  *  Adjust the code: Compute the standard error of mu_hat (the sample mean) and save t to object error. sqrt() computes the square root.
+  *  Compute the critical value z using a 99% confidence level (alpha = 0.01) and create object z
+  *  Compute the lower and upper limits of the confidence interval (CI) by applying the formula given above
+  *  Combine the point estimate and the lower and upper CI values to the object interval_estimate.
+  *  Print the values in interval_estimate, rounded to 1 digit (hint: round())
 
 *** =hint
 
-    The formula for the standard error is s/sqrt(n)
+  *  The formula for the standard error is s/sqrt(n)
 
 *** =pre_exercise_code
 
@@ -493,32 +493,32 @@ success_msg("You are awsome with 99% confidence!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:65d85c42aa
-The sampling distribution
+## The sampling distribution
 
 Remember that you can think of the sampling distribution as a kind of mind game: If we could collect our random sample again and again and calculate a sample mean each time, the result would be the sampling distribution of the mean.
 
-In reality though, we can't produce this distribution, because we only have the one sample. Or can we? Let's pretend for a moment that the data we have is the target population. Let's see what happens if we repeatedly
+In reality though, we cant produce this distribution, because we only have the one sample. Or can we? Lets pretend for a moment that the data we have is the target population. Lets see what happens if we repeatedly
 
-    take random samples from the population
-    calculate the sample mean each time and
-    store the results.
+    * take random samples from the population
+    * calculate the sample mean each time and
+    * store the results.
 
 The resulting distribution of the multiple sample means satisfies the idea of the sampling distribution, meaning that we can actually simulate the distribution! This method (called bootstrapping) is widely used in statistics.
 
 *** =instructions
 
-    Create N and means and print out the empty means vector
-    Execute the for-loop. What does it do?
-    Print out the means vector again
-    Compute basic summary statistics of means using the appropriate function
-    Draw a histogram displaying the sampling disribution of the means
-    See the help page of the hist() function and make it a density histogram
+  *  Create N and means and print out the empty means vector
+  *  Execute the for-loop. What does it do?
+  *  Print out the means vector again
+  *  Compute basic summary statistics of means using the appropriate function
+  *  Draw a histogram displaying the sampling disribution of the means
+  *  See the help page of the hist() function and make it a density histogram
 
 *** =hint
 
-    summary() computes basic summary statistics
-    hist() draws a histogram and the argument freq = F can be used to draw a density histogram
-    ?hist opens the help page of hist()
+ *   summary() computes basic summary statistics
+ *   hist() draws a histogram and the argument freq = F can be used to draw a density histogram
+ *   ?hist opens the help page of hist()
 
 *** =pre_exercise_code
 
@@ -601,9 +601,9 @@ test_error()
 success_msg("Very good work!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:38bf66cd9c
-The central limit theorem
+## The central limit theorem
 
-Let's now get back to the confidence interval for the population mean:
+Lets now get back to the confidence interval for the population mean:
 
 $$\bar{x} \pm z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
 
@@ -611,22 +611,22 @@ where $z$ is a quantile point from the $N(0,1)$ distribution. What is the relati
 
 A mean is a scaled sum, so according to the central limit theorem (CLT), its distribution is approximately normal.
 
-The confidence interval above is based on a normal approximation (for the sampling distribution of the sample mean) and it is a good approximation in theory, according to the CLT. In this exercise we'll explore if that approximation seems to work in practise.
+The confidence interval above is based on a normal approximation (for the sampling distribution of the sample mean) and it is a good approximation in theory, according to the CLT. In this exercise well explore if that approximation seems to work in practise.
 
 *** =instructions
 
-    Create object n and take a random sample of 50 students' exam points and create object points_sample
-    Create objects mu_hat, s and error
-    Print out mu_hat and it's standard error, rounded to 2 digits
-    Inside dnorm(), set the argument mean = the estimate of the population mean of the exam points, based on the random sample of size 50
-    Inside dnorm() set the argument sd = the standard error (the estimate of the standard deviation) of the mean, based on the random sample of size 50
-    Execute the line with hist() and curve(), which visualize (1) the previously simulated sampling distribution of the means, and (2) a normal approximation to that distribution based on the random sample of size 50. (Techically it's two lines of code: ; is code for line change)
-    Does the normal approximation seem useful?
+   *  Create object n and take a random sample of 50 students exam points and create object points_sample
+   *  Create objects mu_hat, s and error
+   * Print out mu_hat and its standard error, rounded to 2 digits
+   * Inside dnorm(), set the argument mean = the estimate of the population mean of the exam points, based on the random sample of size 50
+   *  Inside dnorm() set the argument sd = the standard error (the estimate of the standard deviation) of the mean, based on the random sample of size 50
+   *  Execute the line with hist() and curve(), which visualize (1) the previously simulated sampling distribution of the means, and (2) a normal approximation to that distribution based on the random sample of size 50. (Techically its two lines of code: ; is code for line change)
+   *  Does the normal approximation seem useful?
 
 *** =hint
 
-    mu_hat is the sample mean (the estimate of the population mean)
-    error is the standard error of the sample mean
+   * mu_hat is the sample mean (the estimate of the population mean)
+   * error is the standard error of the sample mean
 
 *** =pre_exercise_code
 
