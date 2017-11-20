@@ -1,11 +1,10 @@
 ---
-title       : Hindamine
-description : Insert the chapter description here
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+title       : Hindamine R-is
+description : siia mingi tekst...
 
---- type:NormalExercise lang:r xp:100 skills:1 key:44d1f23e51
-Exploring estimation with R
+
+---type:NormalExercise lang:r xp:100 skills:1 key:44d1f23e51
+## Exploring estimation with R
 
 Welcome to chapter 8: Estimation. In this chapter we will focus on point and interval estimation. Interval estimation is based on the important concept of the sampling distribution, which is a somewhat theoretical concept and therefore takes a while to get used to.
 
@@ -17,13 +16,13 @@ To explore these concepts, we will start this chapter with some technical tools 
 
 *** =instructions
 
-    Here in DataCamp, when a single expression continues over multiple rows, the whole chunk of code needs to be executed at once. This can be done by first painting (selecting) all the lines in the expression with a mouse and then pressing Ctrl + Enter as normal.
-    Execute the 3 rows long for-loop expression
-    Click submit answer to move on to the next exercise
+  *  Here in DataCamp, when a single expression continues over multiple rows, the whole chunk of code needs to be executed at once. This can be done by first painting (selecting) all the lines in the expression with a mouse and then pressing Ctrl + Enter as normal.
+  *  Execute the 3 rows long for-loop expression
+  *  Click submit answer to move on to the next exercise
 
 *** =hint
 
-    If you cannot paint (select) the expression for some reason, you can just click submit answer instead.
+   * If you cannot paint (select) the expression for some reason, you can just click submit answer instead.
 
 *** =pre_exercise_code
 
