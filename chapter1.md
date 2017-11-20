@@ -97,7 +97,7 @@ boys <-
 
 *** =solution
 
-# Let's create a vector
+# Let create a vector
 names <- c("Matti", "Pekka", "Liisa", "Anna")
 
 # Acess the first value of the vector
@@ -125,7 +125,7 @@ test_error()
 success_msg("Such indices. Wow. Much intelligent.")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:8e0ac16859
-Easy vectors
+## Easy vectors
 
 Sometimes you need a very long index vector. In that case it would be a lot of work to create the vector by combining integer values with c(). Luckily, there are convenient ways to create long vectors in R.
 
@@ -136,17 +136,17 @@ c(1,2,3,4,5)
 
 *** =instructions
 
-    Create an integer vector with values from 1 to 5.
-    Create an integer vector with even values from 2 to 10.
-    Create object attitude and give the values in it names matching the indices.
-    Access index values 1-5 of attitude
-    Use : to create an integer vector with the values 1, 2, ..., 10
-    Access every second value of the attitude vector, starting from the 2. value until the 20th value. These values correspond to the even numbered indeces of the vector: 2, 4, .. , 20
+  *  Create an integer vector with values from 1 to 5.
+  *  Create an integer vector with even values from 2 to 10.
+  *  Create object attitude and give the values in it names matching the indices.
+  *  Access index values 1-5 of attitude
+  *  Use : to create an integer vector with the values 1, 2, ..., 10
+  *  Access every second value of the attitude vector, starting from the 2. value until the 20th value. These values correspond to the even numbered indeces of the vector: 2, 4, .. , 20
 
 *** =hint
 
-    First you will need an index vector with values 2, 4, .. , 20. The example shows how to create such a vector
-    You can then use the index vector together with brackets ([ ]) to complete the task
+  *  First you will need an index vector with values 2, 4, .. , 20. The example shows how to create such a vector
+  *  You can then use the index vector together with brackets ([ ]) to complete the task
 
 *** =pre_exercise_code
 
@@ -213,7 +213,7 @@ test_error()
 success_msg("Great work!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:a26cc4ab51
-Looping
+## Looping
 
 In programming, often there is the need to repeat an action multiple times. In statistical programming you might for example have a theory you wish to explore by simulation.
 
