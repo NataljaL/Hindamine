@@ -3,7 +3,7 @@ title       : Hindamine R-is
 description : siia mingi tekst...
 
 
----type:NormalExercise lang:r xp:100 skills:1 key:44d1f23e51
+--- type:NormalExercise lang:r xp:100 skills:1 key:af3c1cf198
 ## Üldkogumi parameetrite hindamine R-is
 
 Selles praktikumis keskendume punkthinnangute ja vahemikhinnangute leidmisele. Vahemikhinnangu leidmise algoritmid põhinevad hinnangute jaotustel, millest võib mõelda kui mängu:
