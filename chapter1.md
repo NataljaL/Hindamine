@@ -4,19 +4,18 @@ description : siia mingi tekst...
 
 
 ---type:NormalExercise lang:r xp:100 skills:1 key:44d1f23e51
-## Exploring estimation with R
+## Üldkogumi parameetrite hindamine R-is
 
-Welcome to chapter 8: Estimation. In this chapter we will focus on point and interval estimation. Interval estimation is based on the important concept of the sampling distribution, which is a somewhat theoretical concept and therefore takes a while to get used to.
+Selles praktikumis keskendume punkthinnangute ja vahemikhinnangute leidmisele. Vahemikhinnangu leidmise algoritmid põhinevad hinnangute jaotustel, millest võib mõelda kui mängu:
+kui oleks võimalik võtta juhuslik valim uuesti ja uuesti ning igas valimis arvutada näiteks valimikeskmine, siis saadud valimikeskmiste jaotus ongi nn hinnangu jaotuseks.
 
-The sampling distribution is a kind of mind game: If we could collect our random sample again and again and again and calculate the mean for each of the samples, the resulting distribution of these sample means would be the sampling distribution (of the sample mean).
+Tuleb välja, et paljude hinnangute korral saab nende jaotuse lähendada normaaljaotusega teatud parameetritega. Selle tulemuseks on kuulus tsentraalne piirteoreem.
 
-It turns out that for a lot of important point estimates, the sampling distribution can be approximated with the normal distribution with certain known parameters! This is due to a fascinating phenomenom called the central limit theorem.
-
-To explore these concepts, we will start this chapter with some technical tools we will need for constructing loops and simulations.
+Et oleks võimalik uurida hinnangute jaotusi, me alustame praktikumi tehniliste vahenditega, mille abil saame korduvaid valimeid simuleerida.
 
 *** =instructions
 
-  *  Here in DataCamp, when a single expression continues over multiple rows, the whole chunk of code needs to be executed at once. This can be done by first painting (selecting) all the lines in the expression with a mouse and then pressing Ctrl + Enter as normal.
+  *  DataCamp-i keskkonna eripära on see, et kui on tarvis käivitada koodi, mis jätkub mitmel real, siis tuleks esmalt need read ära märkida ja seejärel vajutada `Ctrl+Enter` või nuppu.
   *  Execute the 3 rows long for-loop expression
   *  Click submit answer to move on to the next exercise
 
