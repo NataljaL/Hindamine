@@ -24,34 +24,36 @@ Et oleks võimalik uurida hinnangute jaotusi, me alustame praktikumi tehniliste 
    * If you cannot paint (select) the expression for some reason, you can just click submit answer instead.
 
 *** =pre_exercise_code
-
+```{r}
 # pre exercise code here
+```
+
 
 *** =sample_code
-
+```{r}
 # Execute me!
 for(i in 1:6) {
   print("I am a loop")
 }
-
+```
 
 
 
 *** =solution
-
+```{r}
 # Execute me!
 for(i in 1:6) {
   print("I am a loop")
 }
-
+```
 
 
 
 *** =sct
-
+```{r}
 test_error()
 success_msg("Good work!")
-
+```
 --- type:NormalExercise lang:r xp:100 skills:1 key:23abc9f934
 ## Indices and brackets
 
