@@ -15,13 +15,13 @@ Et oleks võimalik uurida hinnangute jaotusi, me alustame praktikumi tehniliste 
 
 *** =instructions
 
-  *  DataCamp-i keskkonna eripära on see, et kui on tarvis käivitada koodi, mis jätkub mitmel real, siis tuleks esmalt need read ära märkida ja seejärel vajutada `Ctrl+Enter` või nuppu.
-  *  Execute the 3 rows long for-loop expression
-  *  Click submit answer to move on to the next exercise
+  *  DataCamp-i keskkonna eripära on see, et kui on tarvis käivitada koodi, mis jätkub mitmel real, siis tuleks esmalt need read ära märkida ja seejärel vajutada `Ctrl+Enter` või nuppu `Run Code`.
+  *  Käivita 3 rida, mis vastab tsüklile (algab sõnaga `for`).
+  *  Vajuta nuppu `submit`, et suunduda järgmise harjutuse juurde.
 
 *** =hint
 
-   * If you cannot paint (select) the expression for some reason, you can just click submit answer instead.
+   * Kui mingil põhjusel ridu ei õnnestu märgistada, siis lihtsalt vajuta nuppu `submit`.
 
 *** =pre_exercise_code
 ```{r}
@@ -31,7 +31,7 @@ Et oleks võimalik uurida hinnangute jaotusi, me alustame praktikumi tehniliste 
 
 *** =sample_code
 ```{r}
-# Execute me!
+# Käivita mind!
 for(i in 1:6) {
   print("I am a loop")
 }
@@ -41,7 +41,7 @@ for(i in 1:6) {
 
 *** =solution
 ```{r}
-# Execute me!
+# Käivita mind!
 for(i in 1:6) {
   print("I am a loop")
 }
@@ -52,6 +52,6 @@ for(i in 1:6) {
 *** =sct
 ```{r}
 test_error()
-success_msg("Good work!")
+success_msg("Hea töö!")
 ```
 
