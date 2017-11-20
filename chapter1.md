@@ -58,20 +58,20 @@ success_msg("Hea töö!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:23abc9f934
-## Indices and brackets
+## Indeksid ja sulud
 
-Vectors in R store multiple values of the same data type. The values in vectors have indices: the first value in a vector has a index 1, the second value 2 and so on.
+Olete vektoritega juba varem kokku puutunud. Siin uurime neid veel kord. Vektorite abil saab hoida sama tüüpi väärtuseid ja nendele väärtustele vastavad vektoris indeksid: esimesel vektori elemendil on indeks 1, teisel 2 jne.
 
-You can set or get a single value from a vector by using indices and brackets [ ]. Using an index number inside the brackets gives access to a single value from the vector. Using a vector of indices gives access to multiple values (another vector).
+Väärtust saab muuta/vaadata, kasutades selleks vektori nime järel nurksulgudes vastavat indeksit, näiteks `linnad[1]`. Kasutades nurksulgudes ühe indeksi asemel indeksite vektorit, saab vektorist välja võtta mitut elementi korraga, näiteks `linnad[1:3]` annab kolme esimest elementi vektoris `linnad`.
 
-It is also possible to rearrange the values in a vector by using indices. Look at the example code to see how indices work.
+Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näiteks, kuidas saab manipuleerida indeksitega.
 
 *** =instructions
 
-  *  Create the names vector.
-  *  See how the indices work by executing the example lines.
-  *  Use brackets and indices on names to create a new vector girls with values "Liisa" and "Anna" (in that order).
-  *  Use brackets and indices on names to create a new vector boys with values "Pekka" and "Heikki" (in that order).
+  *  Loome vektori `nimed` (käsk on juba kirjutatud).
+  *  Uuri indeksite tööd käivitades näitekäske.
+  *  Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (just sellises järjekorras).
+  *  Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Pekka" and "Heikki" (just sellises järjekorras).
 
 *** =hint
 
