@@ -230,17 +230,17 @@ Inside the curly braces is the body of the loop, which can contain regular comma
 
 *** =instructions
 
-    Please note! Here in DataCamp, executing a command over multiple lines is done by selecting (painting) the lines with a mouse first and then hitting Ctrl+Enter normally. Alternatively you could also click submit to execute the whole script.R
-    Loop though the character values using the examle code.
-    Loop through integer values using the example code.
-    In an honor of the legendary electronic duo Daft Punk and their 2001 album Discovery, construct a for-loop that prints out "One more time!" 27 times.
-    Hints: (1) Remember that 1:n creates an integer vector of length n. (2) Inside the loop body you have to use the print() function to print.
+ *   Please note! Here in DataCamp, executing a command over multiple lines is done by selecting (painting) the lines with a mouse first and then hitting Ctrl+Enter normally. Alternatively you could also click submit to execute the whole script.R
+ *   Loop though the character values using the examle code.
+ *   Loop through integer values using the example code.
+ *   In an honor of the legendary electronic duo Daft Punk and their 2001 album Discovery, construct a for-loop that prints out "One more time!" 27 times.
+  *  Hints: (1) Remember that 1:n creates an integer vector of length n. (2) Inside the loop body you have to use the print() function to print.
 
 *** =hint
 
-    It does not matter what name you give to your counter. You can for example use i as is done in the second example.
-    In this exercise you don't need to use the values of your counter.
-    Remember to use quotation marks to create and print characters.
+   * It does not matter what name you give to your counter. You can for example use i as is done in the second example.
+    * In this exercise you dont need to use the values of your counter.
+    * Remember to use quotation marks to create and print characters.
 
 *** =pre_exercise_code
 
@@ -295,13 +295,13 @@ test_error()
 success_msg("Excellent work! Repetition is the key to success :)")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:78e301b70a
-Point estimation
+## Point estimation
 
 Let us now get back to statistical analysis and estimation. When given a sample of data from a population, the goal of statistical analysis is to use that sample to draw conclusions about the population.
 
 In a simple case we are interested in a single variable (such as students points in an exam) and want to estimate the expected value of that variable. The expected value is the average value in the target population - the population mean.
 
-We can't directly calculate the population average because we only have a sample, so we have to estimate it. Obtaining a point estimate of a population parameter is rather easy: just use the corresponding sample statistic.
+We cant directly calculate the population average because we only have a sample, so we have to estimate it. Obtaining a point estimate of a population parameter is rather easy: just use the corresponding sample statistic.
 population parameter 	estimate
 expected value $\mu$ 	sample mean $\bar{x}$
 population standard deviation $\sigma$ 	sample standard deviation $s$
@@ -310,17 +310,17 @@ In statistics, estimates are often denoted with a hat. So, for example, we also 
 
 *** =instructions
 
-    Create object points
-    Estimate the expected value of points. If you can't remember the name of the R function you need, use your favourite search engine or take a hint.
-    Estimate the population standard deviation of points.
-    Combine the estimates to the estimates vector (replace NA). Notice how c() can be used to give names to the values.
-    Print out the estimates vector, with the values rounded to 2 digits.
+ *   Create object points
+  *  Estimate the expected value of points. If you cant remember the name of the R function you need, use your favourite search engine or take a hint.
+  *  Estimate the population standard deviation of points.
+  *  Combine the estimates to the estimates vector (replace NA). Notice how c() can be used to give names to the values.
+  *  Print out the estimates vector, with the values rounded to 2 digits.
 
 *** =hint
 
-    The table above shows the relationships between the sample statistics and the population parameters.
-    Use the table to figure out which operation you could use to produce the estimate.
-    Mean can be computed with mean()
+   * The table above shows the relationships between the sample statistics and the population parameters.
+*    Use the table to figure out which operation you could use to produce the estimate.
+ *   Mean can be computed with mean()
 
 *** =pre_exercise_code
 
@@ -379,7 +379,7 @@ test_error()
 success_msg("Very nice! You get full points for point estimation.")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:1df061a41a
-Interval estimation
+## Interval estimation
 
 Clearly there is uncertainty involved in a single sample mean (our point estimate). But how much uncertainty? This is where we need statistical theory.
 
