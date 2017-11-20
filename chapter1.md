@@ -71,7 +71,7 @@ Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näite
   *  Loome vektori `nimed` (käsk on juba kirjutatud).
   *  Uuri indeksite tööd käivitades näitekäske.
   *  Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (just sellises järjekorras).
-  *  Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Pekka" and "Heikki" (just sellises järjekorras).
+  *  Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Peeter" and "Heikki" (just sellises järjekorras).
 
 *** =hint
 
@@ -82,49 +82,49 @@ Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näite
 
 *** =sample_code
 ```{r}
-# Let's create a vector
-names <- c("Matti", "Pekka", "Liisa", "Anna")
+# Vektori nimed loomine
+nimed <- c("Marek", "Peeter", "Liisa", "Anna")
 
-# Acess the first value of the vector
-names[1]
+# Vektori 1. element
+nimed[1]
 
-# Change the first value of the vector
-names[1] <- "Heikki"
+# Muudame 1. elementi
+nimed[1] <- "Heikki"
 
-# Acess the 1. and 3. value of the vector
-names[c(1, 3)]
+# 1. ja 3. element
+nimed[c(1, 3)]
 
-# Use indices and brackets to separate the names vector into two vectors of the specified ordering
-girls <-
-boys <-
+# Kasuta indekseid ja sulge, et moodustada vektorist nimed kaks vektorit; ära unusta elementide järjekorda!
+tydrukud <-
+poisid <-
 ```
 
 *** =solution
 ```{r}
-# Let create a vector
-names <- c("Matti", "Pekka", "Liisa", "Anna")
+# Vektori nimed loomine
+nimed <- c("Marek", "Peeter", "Liisa", "Anna")
 
-# Acess the first value of the vector
-names[1]
+# Vektori 1. element
+nimed[1]
 
-# Change the first value of the vector
-names[1] <- "Heikki"
+# Muudame 1. elementi
+nimed[1] <- "Heikki"
 
-# Acess the 1. and 3. value of the vector
-names[c(1, 3)]
+# 1. ja 3. element
+nimed[c(1, 3)]
 
-# Use indices and brackets to separate the names vector into two vectors of the specified ordering
-girls <- names[c(3, 4)]
-boys <- names[c(2, 1)]
+# Kasuta indekseid ja sulge, et moodustada vektorist nimed kaks vektorit; ära unusta elementide järjekorda!
+tydrukud <- names[c(3, 4)]
+poisid <- names[c(2, 1)]
 ```
 *** =sct
 ```{r}
 
-test_object("girls", incorrect_msg = "Did you create `girls`?")
-test_object("boys", incorrect_msg = "Did you create `boys`? Are the values in the correct order?")
+test_object("tydrukud", incorrect_msg = "Vektor pole õige. Kas kasutasid viitamist elementidele vektorist `nimed?`")
+test_object("poisid", incorrect_msg = "Vektor pole õige. Kas kasutasid viitamist elementidele vektorist `nimed? Kontrolli ka elementide järjekorda.`")
 
 test_error()
 
 # Final message the student will see upon completing the exercise
-success_msg("Such indices. Wow. Much intelligent.")
+success_msg("Sellised siis indeksid... ")
 ```
