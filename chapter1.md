@@ -127,3 +127,38 @@ test_error()
 # Final message the student will see upon completing the exercise
 success_msg("Sellised siis indeksid... ")
 ```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:89ff2d98a8
+## Lihtsad vektorid
+Võib juhtuda, et vaja läheb pikka indeksite vektorit. Fuktsiooni `c()` kaudu oleks sellise vektori loomine tõlikas. Õnneks, pakub `R` selle jaoks lihtsaid lahendusi.
+
+Täisarvulise vektori jaoks saab kasutada meetodit `algus:lõpp`, mis loob vektorit kõikide täisarvudega alates arvust `algus` kuni arvuni `lõpp`. Kahe järgmise rea tulemused on samad: 
+
+`1:5`  
+`c(1,2,3,4,5)`
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
