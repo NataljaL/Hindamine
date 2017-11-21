@@ -157,6 +157,21 @@ temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
 
 *** =sample_code
 ```{r}
+# Vektor temperatuur on eelnevalt loodud
+
+# Loo vektor väärtustega 1,2,..,5:
+1:5
+
+# Loo vektor väärtustega 2, 4, .. , 10:
+(1:5)*2
+
+# Ühe nädala temperatuurid alates 5-st päevast (5, 6, 7, 8, 9, 10, 11):
+attitude[5:11]
+
+# Loo vektor väärtustega 1,2,..,10:
+
+
+# Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
 
 ```
 
