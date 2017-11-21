@@ -177,7 +177,22 @@ attitude[5:11]
 
 *** =solution
 ```{r}
+# Vektor temperatuur on eelnevalt loodud
 
+# Loo vektor väärtustega 1,2,..,5:
+1:5
+
+# Loo vektor väärtustega 2, 4, .. , 10:
+(1:5)*2
+
+# Ühe nädala temperatuurid alates 5-st päevast (5, 6, 7, 8, 9, 10, 11):
+attitude[5:11]
+
+# Loo vektor väärtustega 1,2,..,10:
+1:10
+
+# Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
+temperatuur[(1:10)*2]
 ```
 
 *** =sct
