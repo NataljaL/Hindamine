@@ -91,11 +91,5 @@ Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näite
 
 *** =sct
 ```{r}
-test_object("tydrukud", incorrect_msg = "Vektor pole õige. Kas kasutasid viitamist elementidele vektorist nimed?")
-test_object("poisid", incorrect_msg = "Vektor pole õige. Kas kasutasid viitamist elementidele vektorist nimed? Kontrolli ka elementide järjekorda.")
 
-test_error()
-
-# Final message the student will see upon completing the exercise
-success_msg("Sellised siis indeksid... ")
 ```
