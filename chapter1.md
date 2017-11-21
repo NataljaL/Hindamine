@@ -57,7 +57,7 @@ success_msg("Hea töö!")
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:23abc9f934
+--- type:NormalExercise lang:r xp:100 skills:1 key:03d3a42d41
 ## Indeksid ja sulud
 
 Olete vektoritega juba varem kokku puutunud. Siin uurime neid veel kord. Vektorite abil saab hoida sama tüüpi väärtuseid ja nendele väärtustele vastavad vektoris indeksid: esimesel vektori elemendil on indeks 1, teisel 2 jne.
@@ -117,6 +117,8 @@ nimed[c(1, 3)]
 tydrukud <- names[c(3, 4)]
 poisid <- names[c(2, 1)]
 ```
+
+
 *** =sct
 ```{r}
 
@@ -130,7 +132,7 @@ success_msg("Sellised siis indeksid... ")
 ```
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:8e0ac16859
+--- type:NormalExercise lang:r xp:100 skills:1 key:12ded8eae0
 ## Lihtsad vektorid
 
 Võib juhtuda, et vaja läheb pikka indeksite vektorit. Fuktsiooni `c()` kaudu oleks sellise vektori loomine tõlikas. Õnneks, pakub `R` selle jaoks lihtsaid lahendusi.
