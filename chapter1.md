@@ -142,68 +142,59 @@ Täisarvulise vektori jaoks saab kasutada meetodit `algus:lõpp`, mis loob vekto
 
 *** =instructions
 
-  *  Create an integer vector with values from 1 to 5.
-  *  Create an integer vector with even values from 2 to 10.
-  *  Create object attitude and give the values in it names matching the indices.
-  *  Access index values 1-5 of attitude
-  *  Use : to create an integer vector with the values 1, 2, ..., 10
-  *  Access every second value of the attitude vector, starting from the 2. value until the 20th value. These values correspond to the even numbered indeces of the vector: 2, 4, .. , 20
+  *  Loo täisarvuline vektor väärtustega 1 kuni 5 (kaasaarvatud).
+  *  Loo täisarvuline vektor väärtustega 2, 4, ..., 10.
+  *  Vektor `temperatuur` sisaldab ühe kuu õhutemperatuure (mõõdetud kell 12:00 Otepääl). Võta sellest ühe nädala temperatuure alatest 5-st väärtusest.
+  *  Kasuta märki `:`, et luua täisarvuline vektor väärtustega 1, 2, ..., 10.
+  *  Võta vektorist `temperatuur` väärtused alatest  2-st kuni 20 sammuga 2. Temperatuuri väärtused peavad vastama vektori `temperatuur` elementidele indeksitega: 2, 4, .. , 20.
 
 *** =hint
 
-  *  First you will need an index vector with values 2, 4, .. , 20. The example shows how to create such a vector
-  *  You can then use the index vector together with brackets ([ ]) to complete the task
+  *  Kõigepealt läheb vaja vektorit elementidega 2, 4, .. , 20. Uuri näidet, kuidas sellist vektorit luua.
+  *  Seejärel kasuta neid väärtuseid koos kandiliste sulgudega `[ ]`.
 
 *** =pre_exercise_code
 ```{r}
-learning2014 <- read.table("http://www.helsinki.fi/~kvehkala/JYTmooc/learning2014.txt", sep = "\t", header = TRUE)
+temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
 ```
 *** =sample_code
 ```{r}
-# learning2014 is available
+# Vektor temperatuur on eelnevalt loodud
 
-# Create an integer vector with values 1,2,..,5
+# Loo vektor väärtustega 1,2,..,5:
 1:5
 
-# Create an integer vector with even values 2, 4, .. , 10
+# Loo vektor väärtustega 2, 4, .. , 10:
 (1:5)*2
 
-# Create object attitude and give the data points names 1, 2, ..
-attitude <- learning2014$attitude
-names(attitude) <- 1:length(attitude)
+# Ühe nädala temperatuurid alates 5-st päevast (5, 6, 7, 8, 9, 10, 11):
+attitude[5:11]
 
-# Access the values 5 - 10 of attitude
-attitude[5:10]
-
-# Create an integer vector with values 1,2,..,10
+# Loo vektor väärtustega 1,2,..,10:
 
 
-# Access every second value of attitude from 2. to the 20th index
+# Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
 
 ```
 
 *** =solution
 ```{r}
-# learning2014 is available
+# Vektor temperatuur on eelnevalt loodud
 
-# Create an integer vector with values 1,2,..,5
+# Loo vektor väärtustega 1,2,..,5:
 1:5
 
-# Create an integer vector with even values
+# Loo vektor väärtustega 2, 4, .. , 10:
 (1:5)*2
 
-# Create object attitude and give the data points names 1, 2, ..
-attitude <- learning2014$attitude
-names(attitude) <- 1:length(attitude)
+# Ühe nädala temperatuurid alates 5-st päevast (5, 6, 7, 8, 9, 10, 11):
+attitude[5:11]
 
-# Access the values 5 - 10 of attitude
-attitude[5:10]
-
-# Create an integer vector with values 1,2,..,10
+# Loo vektor väärtustega 1,2,..,10:
 1:10
 
-# Access every second value of attitude from 2. to the 20th index
-attitude[(1:10)*2]
+# Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
+temperatuur[(1:10)*2]
 ```
 
 *** =sct
