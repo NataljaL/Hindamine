@@ -209,9 +209,9 @@ temperatuur[(1:10)*2]
 ```{r}
 # submission correctness tests
 
-test_student_typed("1:10", not_typed_msg = "Did you use `:` to create and print out the specified integer vector?")
-test_output_contains("attitude[(1:10)*2]")
-test_output_contains("attitude[2*(1:10)]")
+test_student_typed("1:10", not_typed_msg = "Kas kasutasid märki `:` vektori loomisel?")
+test_output_contains("temperatuur[(1:10)*2]")
+test_output_contains("temperatuur[2*(1:10)]")
 
 # test if the students code produces an error
 test_error()
