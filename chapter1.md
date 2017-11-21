@@ -128,3 +128,94 @@ test_error()
 # Final message the student will see upon completing the exercise
 success_msg("Sellised siis indeksid... ")
 ```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:8e0ac16859
+## Lihtsad vektorid
+
+Võib juhtuda, et vaja läheb pikka indeksite vektorit. Fuktsiooni `c()` kaudu oleks sellise vektori loomine tõlikas. Õnneks, pakub `R` selle jaoks lihtsaid lahendusi.
+
+Täisarvulise vektori jaoks saab kasutada meetodit `algus:lõpp`, mis loob vektorit kõikide täisarvudega alates arvust `algus` kuni arvuni `lõpp`. Kahe järgmise rea tulemused on samad: 
+
+`1:5`  
+`c(1,2,3,4,5)`
+
+*** =instructions
+
+  *  Create an integer vector with values from 1 to 5.
+  *  Create an integer vector with even values from 2 to 10.
+  *  Create object attitude and give the values in it names matching the indices.
+  *  Access index values 1-5 of attitude
+  *  Use : to create an integer vector with the values 1, 2, ..., 10
+  *  Access every second value of the attitude vector, starting from the 2. value until the 20th value. These values correspond to the even numbered indeces of the vector: 2, 4, .. , 20
+
+*** =hint
+
+  *  First you will need an index vector with values 2, 4, .. , 20. The example shows how to create such a vector
+  *  You can then use the index vector together with brackets ([ ]) to complete the task
+
+*** =pre_exercise_code
+```{r}
+learning2014 <- read.table("http://www.helsinki.fi/~kvehkala/JYTmooc/learning2014.txt", sep = "\t", header = TRUE)
+```
+*** =sample_code
+```{r}
+# learning2014 is available
+
+# Create an integer vector with values 1,2,..,5
+1:5
+
+# Create an integer vector with even values 2, 4, .. , 10
+(1:5)*2
+
+# Create object attitude and give the data points names 1, 2, ..
+attitude <- learning2014$attitude
+names(attitude) <- 1:length(attitude)
+
+# Access the values 5 - 10 of attitude
+attitude[5:10]
+
+# Create an integer vector with values 1,2,..,10
+
+
+# Access every second value of attitude from 2. to the 20th index
+
+```
+
+*** =solution
+```{r}
+# learning2014 is available
+
+# Create an integer vector with values 1,2,..,5
+1:5
+
+# Create an integer vector with even values
+(1:5)*2
+
+# Create object attitude and give the data points names 1, 2, ..
+attitude <- learning2014$attitude
+names(attitude) <- 1:length(attitude)
+
+# Access the values 5 - 10 of attitude
+attitude[5:10]
+
+# Create an integer vector with values 1,2,..,10
+1:10
+
+# Access every second value of attitude from 2. to the 20th index
+attitude[(1:10)*2]
+```
+
+*** =sct
+```{r}
+# submission correctness tests
+
+test_student_typed("1:10", not_typed_msg = "Did you use `:` to create and print out the specified integer vector?")
+test_output_contains("attitude[(1:10)*2]")
+
+# test if the students code produces an error
+test_error()
+
+# Final message the student will see upon completing the exercise
+success_msg("Great work!")
+```
