@@ -147,6 +147,8 @@ Täisarvulise vektori jaoks saab kasutada meetodit `algus:lõpp`, mis loob vekto
   *  Võta vektorist `temperatuur` väärtused alatest  2-st kuni 20 sammuga 2. Temperatuuri väärtused peavad vastama vektori `temperatuur` elementidele indeksitega: 2, 4, .. , 20.
 
 *** =hint
+*  Kõigepealt läheb vaja vektorit elementidega 2, 4, .. , 20. Uuri näidet, kuidas sellist vektorit luua.
+  *  Seejärel kasuta neid väärtuseid koos kandiliste sulgudega `[ ]`.
 
 *** =pre_exercise_code
 ```{r}
