@@ -230,7 +230,7 @@ Looegiliste sulgude vahel asub tsükli "keha", mis koosneb käskudest. Nendes sa
 *   Pane tähele, et siin keskkonnas DataCamp tuleks tsükli käivitamiseks kõik selle käsud ära m'rgistada ja seejärel vajutada `Ctrl+Enter` või nuppu `Submit` (terve harjutuse koodi käivitamiseks).
  *   Näites 1 läbib tsükkel kõiki tähti etteantud vektoris.
  *   Näites 2 läbib tsükkel numbreid 1 kuni 5 ja liidab igale arvule juurde 5.
- *   Koosta tsükkel, mis väljastab teksti "One more time!" 27 korda (ütleme Daft Punk'i samanimelise laulu auks).
+ *   Koosta tsükkel, mis väljastab teksti `One more time!` 27 korda (ütleme, et Daft Punk'i samanimelise laulu auks).
   *  Vihjed: (1) Pea meeles, et käsk `1:n` loob täisarvulise vektori pikkusega `n`. (2) Tsükli sees tuleks kasutada funktsiooni `print()` teksti väljastamiseks.
 
 
@@ -287,4 +287,43 @@ test_error()
 
 # Final message the student will see upon completing the exercise
 success_msg("Suurepärane töö! Kordused on tarkuse ema :)")
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:6ff62531f7
+## Punkthinnang
+Tuleme tagasi statistika ülesannete juurde ja uurime parameetrite hindamist: kui on olemas juhuslik valim mingist üldkogumist, siis kasutades valimiandmeid teeme järeldusi üldkogumi parameetrite kohta.
+
+Lihtsamatel juhtudel huvitume ühe tunnuse keskväärtuse hindamisest. Me ei saa seda keskväärtust leida terves üldkogumis, sest andmed on kogutud vaid ühelt selle osa pealt. Saame leida vaid hinnangu sellele. 
+
+We cant directly calculate the population average because we only have a sample, so we have to estimate it. Obtaining a point estimate of a population parameter is rather easy: just use the corresponding sample statistic.
+population parameter 	estimate
+expected value $\mu$ 	sample mean $\bar{x}$
+population standard deviation $\sigma$ 	sample standard deviation $s$
+
+In statistics, estimates are often denoted with a hat. So, for example, we also use the notation $\hat{\mu} = \bar{x}$, and refer to "mu_hat", respectively.
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
