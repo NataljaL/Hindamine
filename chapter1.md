@@ -209,3 +209,82 @@ test_error()
 # Final message the student will see upon completing the exercise
 success_msg("Tubli töö!")
 ```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:865e09760c
+## Tsükkel `for`
+Programmeerimises ja simuleerimisülesannetes on vaja korrata ühte ja sama tegevust mitu korda (näiteks jaotuse kontrollimiseks). Tsükkel `for` on kõige levinum viis korduste teostamiseks. Selle süntaks näeb välja järgmiselt:
+
+`for (loendur in vektor) {`
+  `käsk`
+ ` veel käske`
+`}`
+
+
+Tsükkel `for` läbib kõiki väärtuseid täisarvulises vektoris suurendades iga kord loenduri väärtuse ühe võrra. Tsükli alguses võrdub loendur vektori esimese elemendiga, seejärel teisega jne.
+
+Looegiliste sulgude vahel asub tsükli "keha", mis koosneb käskudest. Nendes saab kasutada loenduri jooksvat väärtust. Kõiki käske korratakse kuni loendur saavutab vektori viimase väärtuste.
+
+*** =instructions
+*   Pane tähele, et siin keskkonnas DataCamp tuleks tsükli käivitamiseks kõik selle käsud ära m'rgistada ja seejärel vajutada `Ctrl+Enter` või nuppu `Submit` (terve harjutuse koodi käivitamiseks).
+ *   Näites 1 läbib tsükkel kõiki tähti etteantud vektoris.
+ *   Näites 2 läbib tsükkel numbreid 1 kuni 5 ja liidab igale arvule juurde 5.
+ *   Koosta tsükkel, mis väljastab teksti "One more time!" 27 korda (ütleme Daft Punk'i samanimelise laulu auks).
+  *  Vihjed: (1) Pea meeles, et käsk `1:n` loob täisarvulise vektori pikkusega `n`. (2) Tsükli sees tuleks kasutada funktsiooni `print()` teksti väljastamiseks.
+
+
+*** =hint
+ * Pole vahet, kuidas sa oma loendurit nimetad. Näites 2 on kasutatud muutuja nime  `i` loenduri jaoks.
+    * Oma ülesandes pole vaja kasutada loenduri jooksvat väärtust.
+    * Ära unusta panna prinditavat teksti jutumärkide vahele!
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Näide 1
+for(letter in c("a","b","c","d")) {
+  print(letter)
+}
+
+# Näide 2
+for(i in 1:5) {
+  print(i + 5)
+}
+
+# Kirjuta oma tsükke, mis väljastab  "One more time!" 27 korda:
+
+```
+
+*** =solution
+```{r}
+# Näide 1
+for(letter in c("a","b","c","d")) {
+  print(letter)
+}
+
+# Näide 2
+for(i in 1:5) {
+  print(i + 5)
+}
+
+# Kirjuta oma tsükke, mis väljastab  "One more time!" 27 korda:
+for(i in 1:27) {
+  print("One more time!")
+}
+```
+
+*** =sct
+```{r}
+test_output_contains("'One more time!'", times = 27, incorrect_msg = "Kas prindid tsüklis teksti 'One more time!' koos hüumärgiga 27 korda?")
+
+# test if the students code produces an error
+test_error()
+
+# Final message the student will see upon completing the exercise
+success_msg("Suurepärane töö! Kordused on tarkuse ema :)")
+```
