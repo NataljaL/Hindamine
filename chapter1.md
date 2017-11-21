@@ -65,9 +65,14 @@ Väärtust saab muuta/vaadata, kasutades selleks vektori nime järel nurksulgude
 Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näiteks, kuidas saab manipuleerida indeksitega.
 
 *** =instructions
-* sfsd
-* sdgdd
+* Loome vektori `nimed` (käsk on juba kirjutatud).
+* Uuri indeksite tööd käivitades näitekäske.
+* Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (just sellises järjekorras).
+* Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Peeter" and "Heikki" (just sellises järjekorras).
+
 *** =hint
+* Pane tähele, et tühikud vektori nime ja nurksulgude vahel võivad tekitada veateateid.
+* Indeksite vektorid `c(1,2)` ja `c(2,1)` annavad erinevaid tulemusi. Elementide järjekord on oluline!
 
 *** =pre_exercise_code
 ```{r}
