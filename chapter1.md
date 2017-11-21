@@ -197,5 +197,15 @@ temperatuur[(1:10)*2]
 
 *** =sct
 ```{r}
+# submission correctness tests
 
+test_student_typed("1:10", not_typed_msg = "Kas kasutasid märki `:` vektori loomisel?")
+test_output_contains("temperatuur[(1:10)*2]")
+test_output_contains("temperatuur[2*(1:10)]")
+
+# test if the students code produces an error
+test_error()
+
+# Final message the student will see upon completing the exercise
+success_msg("Tubli töö!")
 ```
