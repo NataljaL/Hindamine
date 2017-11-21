@@ -152,7 +152,7 @@ Täisarvulise vektori jaoks saab kasutada meetodit `algus:lõpp`, mis loob vekto
 
 *** =pre_exercise_code
 ```{r}
-
+temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
 ```
 
 *** =sample_code
