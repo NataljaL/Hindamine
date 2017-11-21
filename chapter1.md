@@ -81,7 +81,21 @@ Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näite
 
 *** =sample_code
 ```{r}
+# Vektori nimed loomine
+nimed <- c("Marek", "Peeter", "Liisa", "Anna")
 
+# Vektori 1. element
+nimed[1]
+
+# Muudame 1. elementi
+nimed[1] <- "Heikki"
+
+# 1. ja 3. element
+nimed[c(1, 3)]
+
+# Kasuta indekseid ja sulge, et moodustada vektorist nimed kaks vektorit; ära unusta elementide järjekorda!
+tydrukud <-
+poisid <-
 ```
 
 *** =solution
