@@ -491,7 +491,7 @@ Reaalses elus me seda teha ei saa, kuna meil on olemas vaid üks valim. Või sii
 
     * võtame valimeid sellest üldkogumist
     * arvutame igakord valimikeskmise ja
-    * salvestame saadud väärtuseid.
+    * salvestame saadud väärtuse.
 
 Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me saame jaotust simuleerida! See meetod (kannab nimetust bootstrap = taasvalik) on väga levinud statistikas.
 
