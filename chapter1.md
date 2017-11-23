@@ -669,7 +669,7 @@ s <- NA
 st_viga <- NA
 
 # Ümarda ja väljasta
-c(mu_hat, st_viga)
+round(c(mu_hat, st_viga), digits=2)
 
 # (1) Eelmises harjutuses simuleeritud keskmiste histogramm
 # (2) Normaaljatuse kõver, mis põhineb saadud valimil
@@ -698,11 +698,11 @@ s <- sd(valim)
 st_viga <- s/sqrt(n)
 
 # Ümarda ja väljasta
-c(mu_hat, st_viga)
+round(c(mu_hat, st_viga), digits=2)
 
 # (1) Eelmises harjutuses simuleeritud keskmiste histogramm
 # (2) Normaaljatuse kõver, mis põhineb saadud valimil
-hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
+hist(keskmised, freq = F); curve(dnorm(x, mean = mu_hat, sd = s_viga), add = T)
 
 
 ```
