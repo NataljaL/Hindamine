@@ -281,7 +281,7 @@ for(i in 1:27) {
 
 *** =sct
 ```{r}
-test_output_contains("'One more time!'", times = 27, incorrect_msg = "Kas prindid tsüklis teksti 'One more time!' koos hüumärgiga 27 korda?")
+test_output_contains("'One more time!'", times = 27, incorrect_msg = "Kas prindid tsüklis teksti 'One more time!' koos hüümärgiga 27 korda?")
 
 # test if the students code produces an error
 test_error()
