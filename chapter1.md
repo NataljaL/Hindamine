@@ -618,7 +618,7 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
  * Joonista selle vektori põhjal histogramm, mille vertikaalteljel on osakaalud.
  * Leia selle vektori keskmine `mu_hat` ja standardhälve `s`.
  * Kasuta neid argumentidena funktsioonis `dnorm()` nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `s`.
- * Käivita rida `curve()`. See joonistab normaaljaotuse tihedusfunktsioonidele vastavat kõverjoont.
+ * Käivita rida `curve()`. See joonistab normaaljaotuse tihedusfunktsioonile vastavat kõverjoont.
  * Kas histogramm ja normaaljaotuse joon langevad kokku? Kui jah, valimikeskmise jaotuseks  sobibki  normaaljaotus.
  * 
 *** =hint
