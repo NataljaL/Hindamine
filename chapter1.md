@@ -630,7 +630,7 @@ set.seed(7)
 tulemused <- rnorm(175, 15, 1.5)
 tulemused <- round(tulemused, 1)
 
-set.seed(19)
+set.seed(20)
 # Loo tühi vektor pikkusega N
 N <- 100
 keskmised <- numeric(N)
