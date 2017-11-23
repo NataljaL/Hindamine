@@ -502,7 +502,7 @@ Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me
   *  Prindi keskmiste vektor uuesti.
   *  Leia keskmiste vektori arvkarakteristikud kasutades funktsiooni `summary()`.
   *  Joonista keskmiste põhjal histogramm.
-  *  Uuri `help`-is, kuidas muuta käsku `hist`, et see väljastaks `y`-teljele osakaale sageduste asemel.
+  *  Uuri `help`-is, kuidas muuta käsku `hist()` nii, et see väljastaks `y`-teljele sageduste asemel osakaale.
 
 *** =hint
 
