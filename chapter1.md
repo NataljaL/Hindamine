@@ -227,14 +227,16 @@ Tsükkel `for` läbib kõiki väärtuseid täisarvulises vektoris suurendades ig
 Loogiliste sulgude vahel asub tsükli "keha", mis koosneb käskudest. Käsud võivad omakorda kasutada loenduri jooksvat väärtust. Käske korratakse kuni loendur saavutab vektori viimase väärtuse.
 
 *** =instructions
-*   Pane tähele, et siin keskkonnas DataCamp tuleks tsükli käivitamiseks kõik vastavad käsud ära märgistada ja seejärel vajutada `Ctrl+Enter` või nuppu `Submit` (terve harjutuse koodi käivitamiseks).
+ 
+ *   Pane tähele, et siin keskkonnas DataCamp tuleks tsükli käivitamiseks kõik vastavad käsud ära märgistada ja seejärel vajutada `Ctrl+Enter` või nuppu `Submit` (terve harjutuse koodi käivitamiseks).
  *   Näites 1 läbib tsükkel kõiki tähti etteantud vektoris.
  *   Näites 2 läbib tsükkel numbreid 1 kuni 5 ja liidab igale numbrile juurde 5.
  *   Koosta tsükkel, mis väljastab teksti `One more time!` 27 korda (ütleme, et Daft Punk'i samanimelise laulu auks).
-  *  Vihjed: (1) Pea meeles, et käsk `1:n` loob täisarvulise vektori pikkusega `n`. (2) Tsükli sees tuleks kasutada funktsiooni `print()` teksti väljastamiseks.
+ *  Vihjed: (1) Pea meeles, et käsk `1:n` loob täisarvulise vektori pikkusega `n`. (2) Tsükli sees tuleks kasutada funktsiooni `print()` teksti väljastamiseks.
 
 
 *** =hint
+
     * Pole vahet, kuidas sa oma loenduri nimetad. Näites 2 on kasutatud muutuja nime  `i` loenduri jaoks.
     * Oma ülesandes pole vaja kasutada loenduri jooksvat väärtust.
     * Ära unusta panna prinditavat teksti jutumärkide vahele!
