@@ -229,7 +229,7 @@ Loogiliste sulgude vahel asub tsükli "keha", mis koosneb käskudest. Käsud võ
 *** =instructions
 *   Pane tähele, et siin keskkonnas DataCamp tuleks tsükli käivitamiseks kõik vastavad käsud ära märgistada ja seejärel vajutada `Ctrl+Enter` või nuppu `Submit` (terve harjutuse koodi käivitamiseks).
  *   Näites 1 läbib tsükkel kõiki tähti etteantud vektoris.
- *   Näites 2 läbib tsükkel numbreid 1 kuni 5 ja liidab igale arvule juurde 5.
+ *   Näites 2 läbib tsükkel numbreid 1 kuni 5 ja liidab igale numbrile juurde 5.
  *   Koosta tsükkel, mis väljastab teksti `One more time!` 27 korda (ütleme, et Daft Punk'i samanimelise laulu auks).
   *  Vihjed: (1) Pea meeles, et käsk `1:n` loob täisarvulise vektori pikkusega `n`. (2) Tsükli sees tuleks kasutada funktsiooni `print()` teksti väljastamiseks.
 
