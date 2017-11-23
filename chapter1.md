@@ -385,7 +385,7 @@ Sageli on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast pea
 
 *** =instructions
 
-  *  Create objects points, n, mu_hat and s
+  *  Vektor `temperatuur` on kättesaadav.
   *  Adjust the code: Compute the standard error of mu_hat (the sample mean) and save t to object error. sqrt() computes the square root.
   *  Compute the critical value z using a 99% confidence level (alpha = 0.01) and create object z
   *  Compute the lower and upper limits of the confidence interval (CI) by applying the formula given above
