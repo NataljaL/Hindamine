@@ -236,10 +236,9 @@ Loogiliste sulgude vahel asub tsükli "keha", mis koosneb käskudest. Käsud võ
 
 
 *** =hint
-
-    * Pole vahet, kuidas sa oma loenduri nimetad. Näites 2 on kasutatud muutuja nime  `i` loenduri jaoks.
-    * Oma ülesandes pole vaja kasutada loenduri jooksvat väärtust.
-    * Ära unusta panna prinditavat teksti jutumärkide vahele!
+ * Pole vahet, kuidas sa oma loenduri nimetad. Näites 2 on kasutatud muutuja nime  `i` loenduri jaoks.
+ * Oma ülesandes pole vaja kasutada loenduri jooksvat väärtust.
+ * Ära unusta panna prinditavat teksti jutumärkide vahele!
 
 *** =pre_exercise_code
 ```{r}
