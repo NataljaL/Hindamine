@@ -67,8 +67,8 @@ Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näite
 *** =instructions
 * Loo vektor `nimed` (käsk on juba kirjutatud).
 * Uuri indeksite tööd käivitades näitekäske.
-* Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (just sellises järjekorras).
-* Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Peeter" and "Heikki" (just sellises järjekorras).
+* Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (samas järjekorras).
+* Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Peeter" and "Heikki" (samas järjekorras).
 
 *** =hint
 * Pane tähele, et tühikud vektori nime ja nurksulgude vahel võivad tekitada veateateid.
