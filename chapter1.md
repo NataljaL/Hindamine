@@ -11,7 +11,7 @@ kui oleks võimalik võtta juhuslikku valimit uuesti ja uuesti ning igas valimis
 
 Tuleb välja, et paljude hinnangute korral saab nende jaotust lähendada normaaljaotusega teatud parameetritega. See tuleneb kuulsast tsentraalsest piirteoreemist.
 
-Et oleks võimalik uurida hinnangute jaotusi, me alustame praktikumi tehniliste vahenditega, mille abil saame korduvaid valimeid simuleerida.
+Et oleks võimalik uurida hinnangute jaotusi, me alustame praktikumi tehniliste vahenditega, mille abil saame simuleerida korduvaid valimeid.
 
 *** =instructions
 
