@@ -613,9 +613,9 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
 Ülalpool toodud vahemikhinnang põhinebki asümptootilise normaaljaotuse eeldusel. Antud harjutuses uurimegi, et tegelikult töötab tsentraalne piirteoreem üsna hästi suuremahuliste valimite korral.
 
 *** =instructions
- *  Create object n and take a random sample of 50 students exam points and create object points_sample
-   *  Create objects mu_hat, s and error
-   * Print out mu_hat and its standard error, rounded to 2 digits
+ *  Loo muutja `n` ja võta juhuslik valim mahuga 50 tudegite tulemustest. Salvesta see muutujasse `valim`.
+   *  Leia `mu_hat`, `s` ja `st_viga`.
+   * Väljasta `mu_hat` ja selle standardviga ümardades kahe komakohani.
    * Inside dnorm(), set the argument mean = the estimate of the population mean of the exam points, based on the random sample of size 50
    *  Inside dnorm() set the argument sd = the standard error (the estimate of the standard deviation) of the mean, based on the random sample of size 50
    *  Execute the line with hist() and curve(), which visualize (1) the previously simulated sampling distribution of the means, and (2) a normal approximation to that distribution based on the random sample of size 50. (Techically its two lines of code: ; is code for line change)
@@ -665,19 +665,19 @@ hist(keskmised, freq = F)
 
 # Draw a single sample of n = 50 exam points
 n <- 50
-points_sample <- sample(learning2014$points, size = n, replace = F)
+valim <- sample(tulemused, size = n, replace = F)
 
 # Compute the sample mean
-mu_hat <- mean(points_sample)
+mu_hat <- NA
 
 # Compute the sample standard deviation
 s <- NA
 
 # Compute the standard error of the mean
-error <- NA
+st_viga <- NA
 
 # Round and print
-c(mu_hat, error)
+c(mu_hat, st_viga)
 
 # (1) Histogram of the previously simulated sample means and
 # (2) The normal approximation of that distribution, based on a single sample
