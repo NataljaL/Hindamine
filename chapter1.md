@@ -296,7 +296,7 @@ Tuleme tagasi statistika juurde ja uurime siin parameetrite hindamist: meil on o
 
 Lihtsamatel juhtudel huvitume ühe tunnuse keskväärtuse hindamisest. Kuna andmed on kogutud vaid ühe üldkogu osa pealt, siis saame leida vaid hinnangu sellele. Kõige levinumad parameetrid mida hannatakse on üldkogumi keskväärtus $\mu$ ja üldkogumi standardhälve $\sigma$. Nende hinnangud valimis on vastavalt valimikeskmine $\bar x$ ja valimi standardhälve $s$. 
 
-Statistikas tähistatakse tavaliselt hinnanguid katusemärgi $^$ (hat) abil. Näiteks, võite edaspidi näha hinnangu üldkogumi keskväärtusele $\hat{\mu} = \bar{x}$.
+Statistikas tähistatakse tavaliselt hinnanguid katusemärgi (hat) abil. Näiteks, võite edaspidi näha hinnangu üldkogumi keskväärtusele $\hat{\mu} = \bar{x}$.
 *** =instructions
 
  *   Ühe kuu temperatuuride vektor on juba loodud. Vaata.
