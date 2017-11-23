@@ -33,7 +33,7 @@ Et oleks võimalik uurida hinnangute jaotusi, me alustame praktikumi tehniliste 
 ```{r}
 # Käivita mind!
 for(i in 1:6) {
-  print("I am a loop")
+  print("Tere!")
 }
 ```
 
@@ -43,7 +43,7 @@ for(i in 1:6) {
 ```{r}
 # Käivita mind!
 for(i in 1:6) {
-  print("I am a loop")
+  print("Tere!")
 }
 ```
 
