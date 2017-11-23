@@ -367,9 +367,9 @@ success_msg("Väga kena! Said punkte punkthinnangute eest!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:265c07e646
-## Vahemikhinnang (usaldusintervall)
+## Vahemikhinnang ehk usaldusintervall
 
-On selge, et juhusliku valimi põhjal leitud keskmine ise on ka juhusliku loomuga. Seetõttu tekib vajadus seda juhuslikust kuidagi iseloomustada. Üheks võimalikeks võimaluseks on vahemikhinnang, mille keskpunktiks on leitud valimikeskmine.
+On selge, et juhusliku valimi põhjal leitud keskmine ise on ka juhusliku loomuga. Seetõttu tekib vajadus seda juhuslikust kuidagi iseloomustada. Üks võimalus on vahemikhinnang, mille keskpunktiks on leitud valimikeskmine.
 
 On tõestatud, et piisavalt suure valimi korral ($n\geq 60$) sisaldab järgmine vahemik üldkogumi keskväärtust  $100 \cdot (1-\alpha)$% korda 100-st:
 
