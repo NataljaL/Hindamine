@@ -669,7 +669,7 @@ s <- NA
 st_viga <- NA
 
 # Ümarda ja väljasta
-round(c(mu_hat, st_viga), digits=2)
+c(mu_hat, st_viga)
 
 # (1) Eelmises harjutuses simuleeritud keskmiste histogramm
 # (2) Normaaljatuse kõver, mis põhineb saadud valimil
