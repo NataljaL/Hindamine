@@ -495,16 +495,19 @@ Reaalses elus me seda teha ei saa, kuna meil on olemas vaid üks valim. Või sii
 Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me saame jaotust simuleerida! See meetod (kannab nimetust bootstrap = taasvalik) on väga levinud statistikas.
 
 *** =instructions
-*  Create N and means and print out the empty means vector
-  *  Execute the for-loop. What does it do?
-  *  Print out the means vector again
-  *  Compute basic summary statistics of means using the appropriate function
-  *  Draw a histogram displaying the sampling disribution of the means
-  *  See the help page of the hist() function and make it a density histogram
+*  1. kontrolltöö tulemuste vektor on kättesaadav. Teeskleme siin, et tegemist on kogu üldkogumiga.
+*  Loo muutujad `N` ja `keskmised` ning prindi välja tühi keskmiste vektor.
+  *  Käivita tsükkel `for`. Mida ta teostab?
+  *  Prindi keskmiste vektor uuesti.
+  *  Leia keskmiste vektori arvkarakteristikud kasutades funktsiooni `summary()`.
+  *  Joonista keskmiste põhjal histogramm.
+  *  Uuri `help`-is, kuidas muuta käsku `hist`, et see väljastaks `y`-teljele osakaale sageduste asemel.
+
 *** =hint
- *   summary() computes basic summary statistics
- *   hist() draws a histogram and the argument freq = F can be used to draw a density histogram
- *   ?hist opens the help page of hist()
+
+ *   Funktsioon `hist()` joonistab sagedustega histogrammi ja argument `freq = F` muudab sagedusi osakaaludeks.
+ *   Käsu `?hist` abil saab kuvada abi funktsiooni `hist()` kohta.
+ *   
 *** =pre_exercise_code
 ```{r}
 set.seed(888)
