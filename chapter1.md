@@ -132,7 +132,7 @@ success_msg("Sellised ongi indeksid! ")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:89ff2d98a8
 ## Lihtsad vektorid
-Võib juhtuda, et vaja läheb pikka indeksite vektorit. Fuktsiooni `c()` kaudu oleks sellise vektori loomine tõlikas. Õnneks, pakub `R` selle jaoks lihtsaid lahendusi.
+Võib juhtuda, et läheb vaja  pikka indeksite vektorit. Fuktsiooni `c()` kaudu oleks sellise vektori loomine tõlikas. Õnneks, pakub `R` selle jaoks lihtsaid lahendusi.
 
 Täisarvulise vektori jaoks saab kasutada meetodit `algus:lõpp`, mis loob vektorit kõikide täisarvudega alates arvust `algus` kuni arvuni `lõpp`. Kahe järgmise rea tulemused on samad: 
 
