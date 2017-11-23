@@ -373,15 +373,15 @@ On selge, et juhusliku valimi põhjal leitud keskmine ise on ka juhusliku loomug
 
 On tõestatud, et piisavalt suure valimi korral ($n\geq 60$) sisaldab järgmine vahemik üldkogumi keskväärtust  $100 \cdot (1-\alpha)$%  100-st:
 
-$$\bar{x} \pm z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
+$$\bar{x} \pm \bar z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
 
-kus $s$ on valimi standardhälve, $n$ on valimi maht ja $z_{\alpha / 2}$ on jaotuse $N(0,1)$ täiendkvantiil. Sageli nimetatakse osa
+kus $s$ on valimi standardhälve, $n$ on valimi maht ja $\bar z_{\alpha / 2}$ on jaotuse $N(0,1)$ täiendkvantiil. Sageli nimetatakse osa
 
 $$\frac{s}{\sqrt{n}}$$
 
 suuruse $\bar{x}$ standardveaks.
 
-Sageli on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast peaks kasutama $z_{\alpha/2}$? Vastused peituvad valimikeskmise $\bar x$ jaotuses ja varsti me seda uurime.
+Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast peaks kasutama $z_{\alpha/2}$? Vastused peituvad valimikeskmise $\bar x$ jaotuses ja varsti me seda uurime.
 
 
 *** =instructions
