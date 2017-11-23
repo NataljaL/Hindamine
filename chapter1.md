@@ -653,7 +653,6 @@ for(i in 1:N) {
 ```{r}
 # Vektor keskmised on kätte saadav
 
-
 # Histogramm vektori keskmised põhjal. y-teljel - osakaalud!
 
 
@@ -671,9 +670,8 @@ curve(dnorm(x, mean = NA, sd = NA), add = T)
 ```{r}
 # Vektor keskmised on kätte saadav
 
-
 # Histogramm vektori keskmised põhjal. y-teljel - osakaalud!
-hist(keskmised, frequency=F)
+hist(keskmised, freq=F)
 
 # Vektori 'keskmised' keskmine:
 mu_hat <- mean(keskmised)
