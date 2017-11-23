@@ -622,7 +622,7 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
    *  Kas normaaljaotus tundub siin sobivaks?
 *** =hint
  * `mu_hat` on valimikeskmine, mille leidmiseks kasuta funktsiooni `mean()`.
-   * `st_error` vastab valimikeskmise standardveale ja seda saab leida järgmiselt: $s/\sqrt{n}$.
+   * `st_viga` vastab valimikeskmise standardveale ja seda saab leida järgmiselt: $s/\sqrt{n}$.
    
 *** =pre_exercise_code
 ```{r}
