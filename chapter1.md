@@ -62,7 +62,7 @@ Olete vektoritega juba varem kokku puutunud. Siin uurime neid veel kord. Vektori
 
 Väärtust saab muuta/vaadata, kasutades selleks vektori nime järel nurksulgudes vastavat indeksit, näiteks `linnad[1]`. Kasutades nurksulgudes ühe indeksi asemel indeksite vektorit, saab vektorist välja võtta mitut elementi korraga, näiteks `linnad[1:3]` annab kolme esimest elementi vektorist `linnad`.
 
-Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näiteks, kuidas saab manipuleerida indeksitega.
+Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näites, kuidas saab manipuleerida indeksitega.
 
 *** =instructions
 * Loome vektori `nimed` (käsk on juba kirjutatud).
