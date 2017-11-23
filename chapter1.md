@@ -480,115 +480,40 @@ success_msg("Oled cool usaldusnivool 99%!")
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:7a234fe95f
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:8213107e60
 ## Valimikeskmise jaotus
 
-On selge, et juhusliku valimi põhjal leitud keskmine on ise juhusliku loomuga. Kuidas oleks võimalik seda juhuslikkust ära kirjeldada? Üks võimalus on leida vahemikhinnang, mille keskkohaks on valimikeskmine.
+Mäletad, et valimikeskmise jaotuses  on nagu teatud sorti mäng: kui oleks võimalik võtta juhuslike valimeid uuesti ja uuesti ning igakord arvutada valimikeskmist, siis tulemuseks saaksime valimikeskmise jaotuse.
 
-Teoorias on tõestatud, et järgmine vahemikhinnang sisaldab üldkogumi keskväärtust  $100 \cdot (1-\alpha)$% juhul 100-st:
+Reaalses elus me seda teha ei saa, kuna meil on olemas vaid üks valim. Või siiski saame? Teeskleme korraks, et meil on olemas kogu üldkogumi andmed. Vaatame, mis juhtub, kui me korduvalt
 
-$$\bar{x} \pm \bar z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
+    * võtame valimeid sellest üldkogumist
+    * arvutame igakord valimikeskmise ja
+    * salvestame saadud väärtuseid.
 
-kus $s$ valimi standardhälve, $n$ on valimimaht ja $\bar z_{\alpha / 2}$ on jaotuse $N(0,1)$ täiendkvantiil. Sageli nimetatakse avaldise osa
-
-$$\frac{s}{\sqrt{n}}$$
-
-keskmise $\bar{x}$ standardveaks.
-
-Mõnikord küsitakse, kuuidas siin tekib normaaljaotus ja selletäiendkvantiil? Vastus peidub valimikeskmise jaotuses ja me uurime seda.
-
+Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me saame jaotust simuleerida! See meetod (kannab nimetust bootstrap = taasvalik) on väga levinud statistikas.
 
 *** =instructions
-  *  Vektor `tulemused` sisaldab 1. kontrolltöö tulemusi.
-  *  Leia vektori pikkus (valimimaht), tulemuste keskmine ja standardhälve.
-  *  Täienda kood arvutades keskmise standardviga. Funktsiooni `sqrt()` abil saab leida ruutjuure.
-  *  Leia täiendkvantiili $\bar z_{\alpha/2}$ väärtus usaldusnivool 99%  ($\alpha$ = 0.01) ja loo muutuja `z`.
-  *  Arvuta vahemikhinnangu alumine ja ülemine piir kasutades ülalpool toodud valemit.
-  *  Pane kokku ühte vektorisse kolme väärtust: punkthinnangut, alumist ja ülemist piiri.
-  *  Väljasta saadud vektori väärtused ümardades neid ühe kohani peale koma (vihje: `round()`).
 
 *** =hint
-*  Standardvea valem on $s/sqrt(n)$.
 
 *** =pre_exercise_code
 ```{r}
-set.seed(7)
-tulemused <- rnorm(75, 15, 1.5)
-tulemused <- round(tulemused, 1)
+
 ```
 
 *** =sample_code
 ```{r}
-# Vektor tulemused on kättesaadav
-
-# Valimi maht
-n <- length(tulemused)
-
-# Valimikeskmine, hinnang mu-le: 
-mu_hat <- mean(tulemused)
-
-# Valimi standardhälve
-s <- sd(tulemused)
-
-# Leia valimikeskmise standardiga:
-st_viga <- NA
-
-# Normaaljaotuse täiendkvantiil:
-z <- qnorm(0.01/2, lower.tail = F) 
-
-# Vahemikhinnangu alumine ja ülemine piir:
-al_piir <- mu_hat - NA
-yl_piir <- mu_hat + NA
-
-# Kolm väärtust ühte vektorisse:
-hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
-
-# Ümarda hinnangud ühe komakohani ja prindi:
 
 ```
 
 *** =solution
 ```{r}
-# Vektor tulemused on kättesaadav
-
-# Valimi maht
-n <- length(tulemused)
-
-# Valimikeskmine, hinnang mu-le: 
-mu_hat <- mean(tulemused)
-
-# Valimi standardhälve
-s <- sd(tulemused)
-
-# Leia valimikeskmise standardiga:
-st_viga <- NA
-
-# Normaaljaotuse täiendkvantiil:
-z <- qnorm(0.01/2, lower.tail = F) 
-
-# Vahemikhinnangu alumine ja ülemine piir:
-al_piir <- mu_hat - NA
-yl_piir <- mu_hat + NA
-
-# Kolm väärtust ühte vektorisse:
-hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
-
-# Ümarda hinnangud ühe komakohani ja prindi:
-round(hinnangud, digits = 1)
 
 ```
 
 *** =sct
 ```{r}
-# submission correctness tests
-test_object("st_viga")
-test_object("al_piir")
-test_object("yl_piir")
-test_output_contains("round(hinnangud, digits = 1)")
 
-# test if the students code produces an error
-test_error()
-
-# Final message the student will see upon completing the exercise
-success_msg("Oled väga osav!")
 ```
