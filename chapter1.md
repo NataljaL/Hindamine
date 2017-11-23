@@ -224,7 +224,7 @@ Programmeerimis- ja simuleerimisülesannetes on vaja sageli korrata ühte ja sam
 
 Tsükkel `for` läbib kõiki väärtuseid täisarvulises vektoris suurendades iga kord loenduri väärtust ühe võrra. Tsükli alguses võrdub loendur vektori esimese elemendiga, seejärel teisega jne.
 
-Looegiliste sulgude vahel asub tsükli "keha", mis koosneb käskudest. Nendes saab kasutada loenduri jooksvat väärtust. Kõiki käske korratakse kuni loendur saavutab vektori viimase väärtuste.
+Loogiliste sulgude vahel asub tsükli "keha", mis koosneb käskudest. Nendes saab kasutada loenduri jooksvat väärtust. Kõiki käske korratakse kuni loendur saavutab vektori viimase väärtuste.
 
 *** =instructions
 *   Pane tähele, et siin keskkonnas DataCamp tuleks tsükli käivitamiseks kõik selle käsud ära m'rgistada ja seejärel vajutada `Ctrl+Enter` või nuppu `Submit` (terve harjutuse koodi käivitamiseks).
