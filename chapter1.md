@@ -508,7 +508,7 @@ Mõnikord küsitakse, kuuidas siin tekib normaaljaotus ja selletäiendkvantiil? 
   *  Väljasta saadud vektori väärtused ümardades neid ühe kohani peale koma (vihje: `round()`).
 
 *** =hint
-*  The formula for the standard error is s/sqrt(n)
+*  Standardvea valem on $s/sqrt(n)$.
 
 *** =pre_exercise_code
 ```{r}
@@ -519,79 +519,76 @@ tulemused <- round(tulemused, 1)
 
 *** =sample_code
 ```{r}
-# learning2014 is available.
+# Vektor tulemused on kättesaadav
 
-# Create object points
-points <- learning2014$points
+# Valimi maht
+n <- length(tulemused)
 
-# Number of observations
-n <- length(points)
+# Valimikeskmine, hinnang mu-le: 
+mu_hat <- mean(tulemused)
 
-# Sample mean estimates the expected value (mu) 
-mu_hat <- mean(points)
+# Valimi standardhälve
+s <- sd(tulemused)
 
-# Sample standard deviation
-s <- sd(points)
+# Leia valimikeskmise standardiga:
+st_viga <- NA
 
-# Compute the standard error of mu_hat
-error <- NA
-
-# Compute the critical value z
+# Normaaljaotuse täiendkvantiil:
 z <- qnorm(0.01/2, lower.tail = F) 
 
-# Compute the confidence interval
-lower_ci <- mu_hat - NA
-upper_ci <- mu_hat + NA
+# Vahemikhinnangu alumine ja ülemine piir:
+al_piir <- mu_hat - NA
+yl_piir <- mu_hat + NA
 
-# Combine the point and interval estimates to a named vector
-interval_estimate <- c("estimate" = mu_hat, "lower99%" = lower_ci, "upper99%" = upper_ci)
+# Kolm väärtust ühte vektorisse:
+hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
+
+# Ümarda hinnangud ühe komakohani ja prindi:
+
 ```
 
 *** =solution
 ```{r}
-# learning2014 is available.
+# Vektor tulemused on kättesaadav
 
-# Create object points
-points <- learning2014$points
+# Valimi maht
+n <- length(tulemused)
 
-# Number of observations
-n <- length(points)
+# Valimikeskmine, hinnang mu-le: 
+mu_hat <- mean(tulemused)
 
-# Sample mean estimates the expected value (mu) 
-mu_hat <- mean(points)
+# Valimi standardhälve
+s <- sd(tulemused)
 
-# Sample standard deviation
-s <- sd(points)
+# Leia valimikeskmise standardiga:
+st_viga <- NA
 
-# Compute the standard error of mu_hat
-error <- s/sqrt(n)
-
-# Compute the critical value z
+# Normaaljaotuse täiendkvantiil:
 z <- qnorm(0.01/2, lower.tail = F) 
 
-# compute the confidence interval and print out the results
-lower_ci <- mu_hat - z*error
-upper_ci <- mu_hat + z*error
+# Vahemikhinnangu alumine ja ülemine piir:
+al_piir <- mu_hat - NA
+yl_piir <- mu_hat + NA
 
-# Combine the point and interval estimates to a named vector
-interval_estimate <- c("estimate" = mu_hat, "lower99%" = lower_ci, "upper99%" = upper_ci)
+# Kolm väärtust ühte vektorisse:
+hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
 
-# Round and print out the point and interval estimates
-round(interval_estimate, digits = 1)
+# Ümarda hinnangud ühe komakohani ja prindi:
+round(hinnangud, digits = 1)
 
 ```
 
 *** =sct
 ```{r}
 # submission correctness tests
-test_object("error")
-test_object("lower_ci")
-test_object("upper_ci")
-test_output_contains("round(interval_estimate, digits = 1)")
+test_object("st_viga")
+test_object("al_piir")
+test_object("yl_piir")
+test_output_contains("round(hinnangud, digits = 1)")
 
 # test if the students code produces an error
 test_error()
 
 # Final message the student will see upon completing the exercise
-success_msg("You are awsome with 99% confidence!")
+success_msg("Oled väga osav!")
 ```
