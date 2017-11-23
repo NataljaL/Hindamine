@@ -386,95 +386,91 @@ Sageli on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast pea
 *** =instructions
 
   *  Vektor `temperatuur` on kättesaadav.
-  *  Adjust the code: Compute the standard error of mu_hat (the sample mean) and save t to object error. sqrt() computes the square root.
-  *  Compute the critical value z using a 99% confidence level (alpha = 0.01) and create object z
-  *  Compute the lower and upper limits of the confidence interval (CI) by applying the formula given above
-  *  Combine the point estimate and the lower and upper CI values to the object interval_estimate.
-  *  Print the values in interval_estimate, rounded to 1 digit (hint: round())
+  *  Täienda kood: leia `mu_hat` (valimikeskmine) ja `s` (valimistandardhälve). Seejärel leia standardviga, funktsiooni `sqrt()` rakenda ruutjuure leidmiseks.
+  *  Leia täiendkvantiili `\bar z_{\alpha/2}` väärtuse usaldusnivool 99% ($\alpha$ = 0.01) ja loo muutuja `z`.
+  *  Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
+  *  Pane ühte vektorisse keskväärtuse hinanngu ning vahemikhinnangu alumise ja ülemise piiri väärtused.
+  *  Väljasta väärtused vektorist `interval_estimate` ümardades väärtuseid ühe kohani peale koma (vihje: `round()`).
   
 *** =hint
-*  The formula for the standard error is s/sqrt(n)
+*  Standardvea valemiks on $s/sqrt(n)$.
+
 *** =pre_exercise_code
 ```{r}
-
+temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
 ```
 
 *** =sample_code
 ```{r}
-# learning2014 is available.
+# vektor temperatuur on juba loodud
 
-# Create object points
-points <- learning2014$points
+# Valimi maht:
+n <- length(temperatuur)
 
-# Number of observations
-n <- length(points)
+# Valimikeskmine hindab üldkogumi keskväärtust:
+mu_hat <- mean(temperatuur)
 
-# Sample mean estimates the expected value (mu) 
-mu_hat <- mean(points)
+# Valimi standardhälve:
+s <- sd(temperatuur)
 
-# Sample standard deviation
-s <- sd(points)
+# Leia standardviga asendades NA:
+st_viga <- NA
 
-# Compute the standard error of mu_hat
-error <- NA
-
-# Compute the critical value z
+# Täiendkvantiili väärtus:
 z <- qnorm(0.01/2, lower.tail = F) 
 
-# Compute the confidence interval
-lower_ci <- mu_hat - NA
-upper_ci <- mu_hat + NA
+# Vahemikhinnangu alumine ja ülemine piir:
+al_piir <- mu_hat - NA
+yl_piir <- mu_hat + NA
 
-# Combine the point and interval estimates to a named vector
-interval_estimate <- c("estimate" = mu_hat, "lower99%" = lower_ci, "upper99%" = upper_ci)
+# Kolm arvu ühte vektorisse:
+hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
 
-# Round and print out the point and interval estimates
+# Ümarda hinnangud 1 kohani peale koma:
+
 ```
 
 *** =solution
 ```{r}
-# learning2014 is available.
+# vektor temperatuur on juba loodud
 
-# Create object points
-points <- learning2014$points
+# Valimi maht:
+n <- length(temperatuur)
 
-# Number of observations
-n <- length(points)
+# Valimikeskmine hindab üldkogumi keskväärtust:
+mu_hat <- mean(temperatuur)
 
-# Sample mean estimates the expected value (mu) 
-mu_hat <- mean(points)
+# Valimi standardhälve:
+s <- sd(temperatuur)
 
-# Sample standard deviation
-s <- sd(points)
+# Leia standardviga asendades NA:
+st_viga <- s/sqrt(n)
 
-# Compute the standard error of mu_hat
-error <- s/sqrt(n)
-
-# Compute the critical value z
+# Täiendkvantiili väärtus:
 z <- qnorm(0.01/2, lower.tail = F) 
 
-# compute the confidence interval and print out the results
-lower_ci <- mu_hat - z*error
-upper_ci <- mu_hat + z*error
+# Vahemikhinnangu alumine ja ülemine piir:
+al_piir <- mu_hat - z*st_viga
+yl_piir <- mu_hat + z*st_viga
 
-# Combine the point and interval estimates to a named vector
-interval_estimate <- c("estimate" = mu_hat, "lower99%" = lower_ci, "upper99%" = upper_ci)
+# Kolm arvu ühte vektorisse:
+hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
 
-# Round and print out the point and interval estimates
-round(interval_estimate, digits = 1)
+# Ümarda hinnangud 1 kohani peale koma:
+round(hinnangud, digits = 1)
 
 ```
 
 *** =sct
 ```{r}
-test_object("error")
-test_object("lower_ci")
-test_object("upper_ci")
-test_output_contains("round(interval_estimate, digits = 1)")
+test_object("viga")
+test_object("al_piir")
+test_object("yl_piir")
+test_output_contains("round(hinnangud, digits = 1)")
 
 # test if the students code produces an error
 test_error()
 
 # Final message the student will see upon completing the exercise
-success_msg("You are awsome with 99% confidence!")
+success_msg("Oled cool usaldusnivool 99%!")
 ```
