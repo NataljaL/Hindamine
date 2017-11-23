@@ -657,7 +657,7 @@ set.seed(36)
 
 # Võta juhuslik valim mahuga 70 vektorist tulemused
 n <- 70
-valim <- sample(tulemused, size = n, replace = F)
+valim <- sample(tulemused, size = n, replace = T)
 
 # Leia saadud valimi keskmine
 mu_hat <- NA
@@ -685,7 +685,7 @@ hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 
 # Võta juhuslik valim mahuga 70 vektorist tulemused
 n <- 70
-valim <- sample(tulemused, size = n, replace = F)
+valim <- sample(tulemused, size = n, replace = T)
 
 # Leia saadud valimi keskmine
 mu_hat <- mean(valim)
