@@ -294,22 +294,20 @@ success_msg("Suurepärane töö! Kordused on tarkuse ema :)")
 ## Punkthinnang
 Tuleme tagasi statistika juurde ja uurime siin parameetrite hindamist: meil on olemas juhuslik valim ühest üldkogumist ning kasutades valimiandmeid püüame teha järeldusi üldkogumi parameetrite kohta.
 
-Lihtsamatel juhtudel huvitume ühe tunnuse keskväärtuse hindamisest. Kuna andmed on kogutud vaid ühe üldkogu osa pealt, siis saame leida vaid hinnangu sellele. Kõige levinumad parameetrid mida hannatakse on üldkogumi keskväärtus $\mu$ ja üldkogumi dispersioon $\sigma^2$. Nende hinnangud valimis on vastavalt valimikeskmine $\bar x$ ja valimidispersioon $s^2$. 
+Lihtsamatel juhtudel huvitume ühe tunnuse keskväärtuse hindamisest. Kuna andmed on kogutud vaid ühe üldkogu osa pealt, siis saame leida vaid hinnangu sellele. Kõige levinumad parameetrid mida hannatakse on üldkogumi keskväärtus $\mu$ ja üldkogumi standardhälve $\sigma$. Nende hinnangud valimis on vastavalt valimikeskmine $\bar x$ ja valimi standardhälve $s$. 
 
-Statistikas tähistatakse tavaliselt hinnanguid katusemärgi $^$ abil. Näiteks, võite edaspidi näha hinnangu üldkogumi keskväärtusele $\hat{\mu} = \bar{x}$.
+Statistikas tähistatakse tavaliselt hinnanguid katusemärgi $^$ (hat) abil. Näiteks, võite edaspidi näha hinnangu üldkogumi keskväärtusele $\hat{\mu} = \bar{x}$.
 *** =instructions
 
- *   Create object points
-  *  Estimate the expected value of points. If you cant remember the name of the R function you need, use your favourite search engine or take a hint.
-  *  Estimate the population standard deviation of points.
-  *  Combine the estimates to the estimates vector (replace NA). Notice how c() can be used to give names to the values.
-  *  Print out the estimates vector, with the values rounded to 2 digits.
+ *   Ühe kuu temperatuuride vektor on juba loodud. Vaata.
+  *  Hinda temperatuuride keskväärtust. Kui sa ei mäleta, millist funktsiooni kasutada, siis kasuta oma lemmikut otsingumootorit või võta vihjet.
+  *  Hinda temperatuuride standardhälbe.
+  *  Kombineeri mõlemad hinnangud ühte vektorisse (asenda `NA`). Pane ka tähele, kuidas käsus `c()` saab väärtustele anda nimesid.
+  *  Väljasta saadud vektori väärtused ümardades neid 2 kohani peale koma.
+  *  
 *** =hint
 
-   * The table above shows the relationships between the sample statistics and the population parameters.
-*    Use the table to figure out which operation you could use to produce the estimate.
- *   Mean can be computed with mean()
-
+ *   Valimikeskmist saab leida funktsiooni  `mean()` abil.
 
 *** =pre_exercise_code
 ```{r}
@@ -318,40 +316,35 @@ temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
 
 *** =sample_code
 ```{r}
-# learning2014 is available
+# vektor temperatuur on juba loodud
+temperatuur
 
-# create object points using the learning2014 data.frame
-points <- learning2014$points
-
-# estimate the expected value of points
+# temperatuuride keskväärtuse hinnang:
 mu_hat <- 
   
-# estimate the population standard deviation of points
-sigma_hat <- sd(points)
+# temperatuuride standardhälbe hinnang:
+sigma_hat <- sd(temperatuurid)
 
-# Combine the estimates to a named vector and print out the rounded values
-estimates <- c("mu_hat" = NA, "sigma_hat" = NA)
-round(estimates, digits = 2)
+# Hinnangute kombineerimine vektorisse ja ümardamine:
+hinnangud <- c("mu_hat" = mu_hat, "sigma_hat" = sigma_hat)
+round(hinnangud, digits = 2)
 
 ```
 
 *** =solution
 ```{r}
-# learning2014 is available
+# vektor temperatuur on juba loodud
+temperatuur
 
-# create object points using the learning2014 data.frame
-points <- learning2014$points
+# temperatuuride keskväärtuse hinnang:
+mu_hat <- mean(temperatuur)
+  
+# temperatuuride standardhälbe hinnang:
+sigma_hat <- sd(temperatuurid)
 
-# estimate the expected value of points
-mu_hat <- mean(points)
-
-# estimate the population standard deviation of points
-sigma_hat <- sd(points)
-
-# Print out the estimated values
-estimates <- c("mu_hat" = mu_hat, "sigma_hat" = sigma_hat)
-round(estimates, digits = 2)
-
+# Hinnangute kombineerimine vektorisse ja ümardamine:
+hinnangud <- c("mu_hat" = mu_hat, "sigma_hat" = sigma_hat)
+round(hinnangud, digits = 2)
 ```
 
 *** =sct
@@ -359,13 +352,13 @@ round(estimates, digits = 2)
 # submission correctness tests
 
 test_function("mean", args=c("x"))
-test_object("mu_hat", incorrect_msg = "Please create the object mu_hat. Use the correct function on the points vector.")
+test_object("mu_hat", incorrect_msg = "Palun leia muutuja `mu_hat` väärtust. Kasuta õiget funktsiooni keskmise leidmiseks.")
 
-test_output_contains("round(estimates, 2)", incorrect_msg = "Please insert your hat objects to the estimates vector and do not remove the row with `round()`")
+test_output_contains("round(hinnangud, 2)", incorrect_msg = "Asenda väärtused `NA` vektoris `hinnangud` nõutud väärtustega!")
 
 # test if the students code produces an error
 test_error()
 
 # Final message the student will see upon completing the exercise
-success_msg("Very nice! You get full points for point estimation.")
+success_msg("Väga kena! Said punkte punkthinnangute eest!")
 ```
