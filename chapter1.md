@@ -499,25 +499,98 @@ Mõnikord küsitakse, kuuidas siin tekib normaaljaotus ja selletäiendkvantiil? 
 
 
 *** =instructions
+  *  Create objects points, n, mu_hat and s
+  *  Adjust the code: Compute the standard error of mu_hat (the sample mean) and save t to object error. sqrt() computes the square root.
+  *  Compute the critical value z using a 99% confidence level (alpha = 0.01) and create object z
+  *  Compute the lower and upper limits of the confidence interval (CI) by applying the formula given above
+  *  Combine the point estimate and the lower and upper CI values to the object interval_estimate.
+  *  Print the values in interval_estimate, rounded to 1 digit (hint: round())
 
 *** =hint
+*  The formula for the standard error is s/sqrt(n)
 
 *** =pre_exercise_code
 ```{r}
-
+set.seed(7)
+tulemused <- rnorm(75, 15, 1.5)
+tulemused <- round(tulemused, 1)
 ```
 
 *** =sample_code
 ```{r}
+# learning2014 is available.
 
+# Create object points
+points <- learning2014$points
+
+# Number of observations
+n <- length(points)
+
+# Sample mean estimates the expected value (mu) 
+mu_hat <- mean(points)
+
+# Sample standard deviation
+s <- sd(points)
+
+# Compute the standard error of mu_hat
+error <- NA
+
+# Compute the critical value z
+z <- qnorm(0.01/2, lower.tail = F) 
+
+# Compute the confidence interval
+lower_ci <- mu_hat - NA
+upper_ci <- mu_hat + NA
+
+# Combine the point and interval estimates to a named vector
+interval_estimate <- c("estimate" = mu_hat, "lower99%" = lower_ci, "upper99%" = upper_ci)
 ```
 
 *** =solution
 ```{r}
+# learning2014 is available.
+
+# Create object points
+points <- learning2014$points
+
+# Number of observations
+n <- length(points)
+
+# Sample mean estimates the expected value (mu) 
+mu_hat <- mean(points)
+
+# Sample standard deviation
+s <- sd(points)
+
+# Compute the standard error of mu_hat
+error <- s/sqrt(n)
+
+# Compute the critical value z
+z <- qnorm(0.01/2, lower.tail = F) 
+
+# compute the confidence interval and print out the results
+lower_ci <- mu_hat - z*error
+upper_ci <- mu_hat + z*error
+
+# Combine the point and interval estimates to a named vector
+interval_estimate <- c("estimate" = mu_hat, "lower99%" = lower_ci, "upper99%" = upper_ci)
+
+# Round and print out the point and interval estimates
+round(interval_estimate, digits = 1)
 
 ```
 
 *** =sct
 ```{r}
+# submission correctness tests
+test_object("error")
+test_object("lower_ci")
+test_object("upper_ci")
+test_output_contains("round(interval_estimate, digits = 1)")
 
+# test if the students code produces an error
+test_error()
+
+# Final message the student will see upon completing the exercise
+success_msg("You are awsome with 99% confidence!")
 ```
