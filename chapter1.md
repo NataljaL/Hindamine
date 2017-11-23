@@ -466,7 +466,7 @@ round(hinnangud, digits = 1)
 
 *** =sct
 ```{r}
-test_object("viga")
+test_object("st_viga")
 test_object("al_piir")
 test_object("yl_piir")
 test_output_contains("round(hinnangud, digits = 1)")
