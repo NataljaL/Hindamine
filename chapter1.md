@@ -388,7 +388,7 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
 
   *  Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. 
   *  Täienda kood: leia `mu_hat` (valimikeskmine) ja `s` (valimistandardhälve). Seejärel leia standardviga (funktsiooni `sqrt()` rakenda ruutjuure leidmiseks).
-  *  Leia täiendkvantiili `\bar z_{\alpha/2}` väärtuse usaldusnivool 99% ($\alpha$ = 0.01) ja loo muutuja `z`.
+  *  Leia täiendkvantiili $\bar z_{\alpha/2}$ väärtuse usaldusnivool 99% ($\alpha$ = 0.01) ja loo muutuja `z`.
   *  Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
   *  Pane ühte vektorisse keskväärtuse hinanngu ning vahemikhinnangu alumise ja ülemise piiri väärtused.
   *  Väljasta väärtused vektorist `interval_estimate` ümardades väärtuseid ühe kohani peale koma (vihje: `round()`).
