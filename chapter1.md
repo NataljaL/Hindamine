@@ -214,7 +214,7 @@ success_msg("Tubli töö!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:865e09760c
 ## Tsükkel `for`
-Programmeerimises ja simuleerimisülesannetes on vaja korrata ühte ja sama tegevust mitu korda (näiteks jaotuse kontrollimiseks). Tsükkel `for` on kõige levinum viis korduste teostamiseks. Selle süntaks näeb välja järgmiselt:
+Programmeerimis- ja simuleerimisülesannetes on vaja sageli korrata ühte ja sama tegevust mitu korda (näiteks jaotuse kontrollimiseks). Tsükkel `for` on kõige levinum viis korduste teostamiseks. Selle süntaks näeb välja järgmiselt:
 
 `for (loendur in vektor) {`
   `käsk`
