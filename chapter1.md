@@ -142,7 +142,7 @@ Täisarvulise vektori loomiseks saab kasutada  `algus:lõpp` meetodit, mis loob 
 *** =instructions
 *  Loo täisarvuline vektor väärtustega 1 kuni 5 (kaasaarvatud).
   *  Loo täisarvuline vektor väärtustega 2, 4, ..., 10.
-  *  Vektor `temperatuur` sisaldab ühe kuu õhutemperatuure (mõõdetud kell 12:00 Otepääl). Võta sellest ühe nädala temperatuure alatest 5-st väärtusest.
+  *  Vektor `temperatuur` sisaldab ühe kuu õhutemperatuure (mõõdetud kell 12:00 Otepääl). Võta sellest seitsme päeva temperatuurid alatest 5. väärtusest.
   *  Kasuta märki `:`, et luua täisarvuline vektor väärtustega 1, 2, ..., 10.
   *  Võta vektorist `temperatuur` väärtused alatest  2-st kuni 20 sammuga 2. Temperatuuri väärtused peavad vastama vektori `temperatuur` elementidele indeksitega: 2, 4, .. , 20.
 
