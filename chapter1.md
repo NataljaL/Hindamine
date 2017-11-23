@@ -647,7 +647,7 @@ for(i in 1:N) {
   keskmised[i] <- mean(valim)
 }
 
-set.seed(4)
+set.seed(5)
 ```
 
 *** =sample_code
