@@ -614,15 +614,16 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
 Ülalpool toodud vahemikhinnang põhinebki asümptootilise normaaljaotuse eeldusel. Antud harjutuses uurime, et tegelikult töötab tsentraalne piirteoreem üsna hästi suuremahuliste valimite korral.
 
 *** =instructions
- *  Loo muutja `n` ja võta juhuslik valim mahuga 70 tudegite tulemustest. Salvesta see muutujasse `valim`.
-   *  Leia `mu_hat`, `s` ja `st_viga`.
-   * Väljasta `mu_hat` ja selle standardviga ümardades kahe komakohani.
-   * Omista funktsiooni `dnorm()` argumentidele väärtused nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `st_viga`.
-   *  Käivita rida, mis sisaldab funktsiooni `hist()` ja funktsiooni `curve()`, mis visualiseerivad: (1) eelmises harjutuses simuleeritud valimikeskmiste jaotust ja (2) normaaljaotusele vastavat joont. (Tehniliselt on siin tegemist kahe käsuga; märk `;` eraldab kahte käsku).
-   *  Kas normaaljaotus tundub siin sobivaks?
+ * Kasutame eelmises harjutuses loodud keskmiste vektorit.
+ * Joonista selle vektori põhjal histogramm, mille vertikaalteljel on osakaalud.
+ * Leia selle vektori keskmine `mu_hat` ja standardhälve `s`.
+ * Kasuta neid argumentidena funktsioonis `dnorm()` nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `s`.
+ * Käivita rida `curve()`. See joonistab normaaljaotuse tihedusfunktsioonidele vastavat kõverjoont.
+ * Kas histogramm ja normaaljaotuse joon langevad kokku? Kui jah, valimikeskmise jaotuseks  sobibki  normaaljaotus.
+ * 
 *** =hint
  * `mu_hat` on valimikeskmine, mille leidmiseks kasuta funktsiooni `mean()`.
-   * `st_viga` vastab valimikeskmise standardveale ja seda saab leida järgmiselt: $s/\sqrt{n}$.
+   * standardhälvet saab leida funktsiooni `sd()` abil.
    
 *** =pre_exercise_code
 ```{r}
@@ -646,71 +647,48 @@ for(i in 1:N) {
   valim <- sample(tulemused, size = 70, replace = T)
   keskmised[i] <- mean(valim)
 }
-
-set.seed(5)
 ```
 
 *** =sample_code
 ```{r}
-# vektor tulemused on kätte saadav
+# Vektor keskmised on kätte saadav
 
 
-# Võta juhuslik valim mahuga 70 vektorist tulemused
-n <- 70
-valim <- sample(tulemused, size = n, replace = T)
+# Histogramm vektori keskmised põhjal. y-teljel - osakaalud!
 
-# Leia saadud valimi keskmine
+
+# Vektori 'keskmised' keskmine:
 mu_hat <- NA
 
-# Leia saadud valimi standardhälve
+# Vektori 'keskmised' standardhälve:
 s <- NA
 
-# Leia valimi keskmise standardviga
-st_viga <- NA
-
-# Ümarda ja väljasta
-c(mu_hat, st_viga)
-
-# (1) Eelmises harjutuses simuleeritud keskmiste histogramm
-# (2) Normaaljatuse kõver, mis põhineb saadud valimil
-hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
-
-
+# Normaaljatuse kõver, mis põhineb leitud väärtustel
+curve(dnorm(x, mean = NA, sd = NA), add = T)
 ```
 
 *** =solution
 ```{r}
-# vektor tulemused on kätte saadav
+# Vektor keskmised on kätte saadav
 
 
-# Võta juhuslik valim mahuga 70 vektorist tulemused
-n <- 70
-valim <- sample(tulemused, size = n, replace = T)
+# Histogramm vektori keskmised põhjal. y-teljel - osakaalud!
+hist(keskmised, frequency=F)
 
-# Leia saadud valimi keskmine
-mu_hat <- mean(valim)
+# Vektori 'keskmised' keskmine:
+mu_hat <- mean(keskmised)
 
-# Leia saadud valimi standardhälve
-s <- sd(valim)
+# Vektori 'keskmised' standardhälve:
+s <- sd(keskmised)
 
-# Leia valimi keskmise standardviga
-st_viga <- s/sqrt(n)
-
-# Ümarda ja väljasta
-round(c(mu_hat, st_viga), digits=2)
-
-# (1) Eelmises harjutuses simuleeritud keskmiste histogramm
-# (2) Normaaljatuse kõver, mis põhineb saadud valimil
-hist(keskmised, freq = F); curve(dnorm(x, mean = mu_hat, sd = st_viga), add = T)
-
-
+# Normaaljatuse kõver, mis põhineb leitud väärtustel
+curve(dnorm(x, mean = mu_hat, sd = s), add = T)
 ```
 
 *** =sct
 ```{r}
 test_object("mu_hat")
 test_object("s")
-test_object("st_viga")
 
 test_function("dnorm", args = c("mean","sd"))
 
