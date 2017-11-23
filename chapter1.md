@@ -702,7 +702,7 @@ round(c(mu_hat, st_viga), digits=2)
 
 # (1) Eelmises harjutuses simuleeritud keskmiste histogramm
 # (2) Normaaljatuse kõver, mis põhineb saadud valimil
-hist(keskmised, freq = F); curve(dnorm(x, mean = mu_hat, sd = s_viga), add = T)
+hist(keskmised, freq = F); curve(dnorm(x, mean = mu_hat, sd = st_viga), add = T)
 
 
 ```
