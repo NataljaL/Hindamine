@@ -144,7 +144,7 @@ Täisarvulise vektori loomiseks saab kasutada  `algus:lõpp` meetodit, mis loob 
   *  Loo täisarvuline vektor väärtustega 2, 4, ..., 10.
   *  Vektor `temperatuur` sisaldab ühe kuu õhutemperatuure (mõõdetud kell 12:00 Otepääl). Võta sellest seitsme päeva temperatuurid alatest vektori 5. elemendist.
   *  Kasuta märki `:`, et luua täisarvuline vektor väärtustega 1, 2, ..., 10.
-  *  Võta vektorist `temperatuur` väärtused alatest  2-st kuni 20 sammuga 2. Temperatuuri väärtused peavad vastama vektori `temperatuur` elementidele indeksitega: 2, 4, .. , 20.
+  *  Võta vektorist `temperatuur` elemendid alatest  2. kuni 20-ni sammuga 2. Temperatuuri väärtused peavad vastama vektori `temperatuur` elementidele indeksitega: 2, 4, .. , 20.
 
 *** =hint
 *  Kõigepealt läheb vaja vektorit elementidega 2, 4, .. , 20. Uuri näidet, kuidas sellist vektorit luua.
@@ -165,7 +165,7 @@ temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
 # Loo vektor väärtustega 2, 4, .. , 10:
 (1:5)*2
 
-# Ühe nädala temperatuurid alates 5-st päevast (5, 6, 7, 8, 9, 10, 11):
+# Ühe nädala temperatuurid alates 5. elemendist (5, 6, 7, 8, 9, 10, 11):
 temperatuur[5:11]
 
 # Loo vektor väärtustega 1,2,..,10:
@@ -185,7 +185,7 @@ temperatuur[5:11]
 # Loo vektor väärtustega 2, 4, .. , 10:
 (1:5)*2
 
-# Ühe nädala temperatuurid alates 5-st päevast (5, 6, 7, 8, 9, 10, 11):
+# Ühe nädala temperatuurid alates 5. elemendist (5, 6, 7, 8, 9, 10, 11):
 temperatuur[5:11]
 
 # Loo vektor väärtustega 1,2,..,10:
