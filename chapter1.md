@@ -295,7 +295,7 @@ success_msg("Suurepärane töö! Kordused on tarkuse ema :)")
 ## Punkthinnang
 Tuleme tagasi statistika juurde ja uurime siin parameetrite hindamist: meil on olemas juhuslik valim ühest üldkogumist ning kasutades valimiandmeid püüame teha järeldusi üldkogumi parameetrite kohta.
 
-Lihtsamatel juhtudel huvitume ühe tunnuse keskväärtuse hindamisest. Kuna andmed on kogutud vaid ühe üldkogu osa pealt, siis saame leida vaid hinnangu sellele. Kõige levinumad parameetrid mida hannatakse on üldkogumi keskväärtus $\mu$ ja üldkogumi standardhälve $\sigma$. Nende hinnangud valimis on vastavalt valimikeskmine $\bar x$ ja valimi standardhälve $s$. 
+Lihtsamatel juhtudel huvitume ühe ainsa tunnuse keskväärtuse hindamisest. Kuna andmed on kogutud vaid ühe üldkogu osa pealt, siis saame leida vaid hinnangu sellele. Kõige levinumad parameetrid mida hannatakse on üldkogumi keskväärtus $\mu$ ja üldkogumi standardhälve $\sigma$. Nende hinnangud valimis on vastavalt valimikeskmine $\bar x$ ja valimi standardhälve $s$. 
 
 Statistikas tähistatakse tavaliselt hinnanguid katusemärgi (hat) abil. Näiteks, võite edaspidi näha hinnangu üldkogumi keskväärtusele $\hat{\mu} = \bar{x}$.
 *** =instructions
