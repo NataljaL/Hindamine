@@ -586,7 +586,7 @@ hist(keskmised, freq = F)
 # submission correctness tests
 
 test_output_contains("numeric(N)")
-test_output_contains("means")
+test_output_contains("keskmised")
 test_function("summary", args=c("object"))
 test_function("hist", args=c("x","freq"))
 
@@ -594,5 +594,5 @@ test_function("hist", args=c("x","freq"))
 test_error()
 
 # Final message the student will see upon completing the exercise
-success_msg("Very good work!")
+success_msg("Väga tubli töö!")
 ```
