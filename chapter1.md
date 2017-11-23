@@ -323,7 +323,7 @@ temperatuur
 mu_hat <- 
   
 # temperatuuride standardhälbe hinnang:
-sigma_hat <- sd(temperatuurid)
+sigma_hat <- sd(temperatuur)
 
 # Hinnangute kombineerimine vektorisse ja ümardamine:
 hinnangud <- c("mu_hat" = mu_hat, "sigma_hat" = sigma_hat)
@@ -340,7 +340,7 @@ temperatuur
 mu_hat <- mean(temperatuur)
   
 # temperatuuride standardhälbe hinnang:
-sigma_hat <- sd(temperatuurid)
+sigma_hat <- sd(temperatuur)
 
 # Hinnangute kombineerimine vektorisse ja ümardamine:
 hinnangud <- c("mu_hat" = mu_hat, "sigma_hat" = sigma_hat)
