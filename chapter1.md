@@ -611,7 +611,7 @@ kus $\bar z_{\alpha / 2}$ on jaotuse $N(0,1)$ $\alpha/2$-täiendkvantiil. Millin
 
 Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile on summa asümptootilise normaaljatusega (st, et mida suurem on valimimaht $n$, seda "ilusamat" normaaljatust saame).
 
-Ülalpool toodud vahemikhinnang põhinebki asümptootilise normaaljaotuse eeldusel. Antud harjutuses uurimegi, et tegelikult töötab tsentraalne piirteoreem üsna hästi suuremahuliste valimite korral.
+Ülalpool toodud vahemikhinnang põhinebki asümptootilise normaaljaotuse eeldusel. Antud harjutuses uurime, et tegelikult töötab tsentraalne piirteoreem üsna hästi suuremahuliste valimite korral.
 
 *** =instructions
  *  Loo muutja `n` ja võta juhuslik valim mahuga 70 tudegite tulemustest. Salvesta see muutujasse `valim`.
