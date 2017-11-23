@@ -625,23 +625,36 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
    * error is the standard error of the sample mean
 *** =pre_exercise_code
 ```{r}
+set.seed(7)
+tulemused <- rnorm(75, 15, 1.5)
+tulemused <- round(tulemused, 1)
+
 set.seed(888)
-
-# Create an empty vector of length N (size of the simulation)
+# Loo tühi vektor pikkusega N
 N <- 100
-means <- numeric(N)
+keskmised <- numeric(N)
 
-# Repeat N times: 
-  # (1) draw a random sample of n = 50 exam points
-  # (2) compute the mean of the sampled exam points and 
-  # (3) store it in the means vector
+# Prindi tühi keskmiste vektor välja:
+keskmised
+
+# Korda N korda: 
+  # (1) võta juhuslik valim pikkusega  n = 50  vektorist tulemused
+  # (2) leia valimikeskmine
+  # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  points_sample <- sample(learning2014$points, size = 50, replace = F)
-  means[i] <- mean(points_sample)
+  valim <- sample(tulemused, size = 50, replace = F)
+  keskmised[i] <- mean(valim)
 }
 
-# Visualize the distribution of the means with a histogram
-hist(means, freq = F)
+# Prindi keskmiste vektor uuesti välja:
+keskmised
+
+# Arvuta selle arvkarakteristikud:
+summary(keskmised)
+
+#  Visualiseeri keskmised histogrammi abil:
+hist(keskmised, freq = F)
+
 ```
 
 *** =sample_code
