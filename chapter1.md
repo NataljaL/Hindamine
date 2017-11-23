@@ -362,3 +362,47 @@ test_error()
 # Final message the student will see upon completing the exercise
 success_msg("Väga kena! Said punkte punkthinnangute eest!")
 ```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:265c07e646
+## Vahemikhinnang (usaldusintervall)
+
+Clearly there is uncertainty involved in a single sample mean (our point estimate). But how much uncertainty? This is where we need statistical theory.
+
+One way to approach this question is to try to come up with an interval around the point estimate to describe our uncertainty. It turns out that the following formula produces an interval which contains the true population mean $100 \cdot (1-\alpha)$% of the time:
+
+$$\bar{x} \pm z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
+
+where $s$ is the sample standard deviation, $n$ is the sample size and $z_{\alpha / 2}$ is a critical (quantile) value from the $N(0,1)$ distribution. The part
+
+$$\frac{s}{\sqrt{n}}$$
+
+is called the standard error of the sample mean $\bar{x}$.
+
+I know what you're thinking. It's confusing: where did the normal distribution come from and whats with all that $z_{\alpha/2}$ stuff? The answers lie in the sampling distribution which we will soon get to.
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
