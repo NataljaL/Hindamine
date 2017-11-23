@@ -394,7 +394,7 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
   *  Väljasta väärtused vektorist `hinnangud` ümardades väärtused ühe komakohani (vihje: `round()`).
   
 *** =hint
-*  Standardvea valemiks on $s/sqrt(n)$.
+*  Standardvea valemiks on $\frac{s}{sqrt(n)}$.
 
 *** =pre_exercise_code
 ```{r}
