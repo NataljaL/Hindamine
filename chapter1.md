@@ -368,23 +368,22 @@ success_msg("Väga kena! Said punkte punkthinnangute eest!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:265c07e646
 ## Vahemikhinnang (usaldusintervall)
 
-Clearly there is uncertainty involved in a single sample mean (our point estimate). But how much uncertainty? This is where we need statistical theory.
+On selge, et juhusliku valimi põhjal leitud keskmine ise on ka juhusliku loomuga. Seetõttu tekib vajadus seda juhuslikust kuidagi iseloomustada. Üheks võimalikeks võimaluseks on vahemikhinnang, mille keskpunktiks on leitud valimikeskmine.
 
-One way to approach this question is to try to come up with an interval around the point estimate to describe our uncertainty. It turns out that the following formula produces an interval which contains the true population mean $100 \cdot (1-\alpha)$% of the time:
+On tõestatud, et piisavalt suure valimi korral ($n\geq 60$) sisaldab järgmine vahemik üldkogumi keskväärtust  $100 \cdot (1-\alpha)$% korda 100-st:
 
 $$\bar{x} \pm z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
 
-where $s$ is the sample standard deviation, $n$ is the sample size and $z_{\alpha / 2}$ is a critical (quantile) value from the $N(0,1)$ distribution. The part
+kus $s$ on valimi standardhälve, $n$ on valimi maht ja $z_{\alpha / 2}$ on jaotuse $N(0,1)$ täiendkvantiil. Sageli nimetatakse osa
 
 $$\frac{s}{\sqrt{n}}$$
 
-is called the standard error of the sample mean $\bar{x}$.
+suuruse $\bar{x}$ standardveaks.
 
-I know what you're thinking. It's confusing: where did the normal distribution come from and whats with all that $z_{\alpha/2}$ stuff? The answers lie in the sampling distribution which we will soon get to.
+Sageli on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast peaks kasutama $z_{\alpha/2}$? Vastused peituvad valimikeskmise $\bar x$ jaotuses ja varsti me seda uurime.
 
 
 *** =instructions
-
 
   *  Create objects points, n, mu_hat and s
   *  Adjust the code: Compute the standard error of mu_hat (the sample mean) and save t to object error. sqrt() computes the square root.
