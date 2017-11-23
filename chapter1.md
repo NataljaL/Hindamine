@@ -507,72 +507,75 @@ Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me
 
  *   Funktsioon `hist()` joonistab sagedustega histogrammi ja argument `freq = F` muudab sagedusi osakaaludeks.
  *   Käsu `?hist` abil saab kuvada abi funktsiooni `hist()` kohta.
- *   
+ 
 *** =pre_exercise_code
 ```{r}
+set.seed(7)
+tulemused <- rnorm(75, 15, 1.5)
+tulemused <- round(tulemused, 1)
+
 set.seed(888)
 ```
 
 *** =sample_code
 ```{r}
-# learning2014 is available
+# vektor tulemused on kättesaadav
 
-# Create an empty vector of length N
+# Loo tühi vektor pikkusega N
 N <- 100
-means <- numeric(N)
+keskmised <- numeric(N)
 
-# Print out the empty vector
+# Prindi tühi keskmiste vektor välja:
 
 
-# Repeat N times: 
-  # (1) draw a random sample of n = 50 exam points
-  # (2) compute the mean of the sampled exam points and 
-  # (3) store it in the means vector
+# Korda N korda: 
+  # (1) võta juhuslik valim pikkusega  n = 50  vektorist tulemused
+  # (2) leia valimikeskmine
+  # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  points_sample <- sample(learning2014$points, size = 50, replace = F)
-  means[i] <- mean(points_sample)
+  valim <- sample(tulemused, size = 50, replace = F)
+  keskmised[i] <- mean(valim)
 }
 
-# Print out the means vector
+# Prindi keskmiste vektor uuesti välja:
 
 
-# Compute basic summary statistics
+# Arvuta selle arvkarakteristikud:
 
 
-# Visualize the distribution of the means with a histogram
+# Visualiseeri keskmised histogrammi abil:
 
 
 ```
 
 *** =solution
 ```{r}
+# vektor tulemused on kättesaadav
 
-# learning2014 is available
-
-# Create an empty vector of length N (size of our experiment)
+# Loo tühi vektor pikkusega N
 N <- 100
-means <- numeric(N)
+keskmised <- numeric(N)
 
-# Print out the empty vector
-means
+# Prindi tühi keskmiste vektor välja:
+keskmised
 
-# Repeat N times: 
-  # (1) draw a random sample of n = 50 exam points
-  # (2) compute the mean of the sampled exam points and 
-  # (3) store it in the means vector
+# Korda N korda: 
+  # (1) võta juhuslik valim pikkusega  n = 50  vektorist tulemused
+  # (2) leia valimikeskmine
+  # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  points_sample <- sample(learning2014$points, size = 50, replace = F)
-  means[i] <- mean(points_sample)
+  valim <- sample(tulemused, size = 50, replace = F)
+  keskmised[i] <- mean(valim)
 }
 
-# Print out the means vector
-means
+# Prindi keskmiste vektor uuesti välja:
+keskmised
 
-# Compute basic summary statistics
-summary(means)
+# Arvuta selle arvkarakteristikud:
+summary(keskmised)
 
-# Visualize the distribution of the means with a histogram
-hist(means, freq = F)
+#  Visualiseeri keskmised histogrammi abil:
+hist(keskmised, freq = F)
 
 
 ```
