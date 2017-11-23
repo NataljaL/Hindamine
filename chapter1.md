@@ -391,7 +391,7 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
   *  Leia täiendkvantiili $\bar z_{\alpha/2}$ väärtuse usaldusnivool 99% ($\alpha$ = 0.01) ja loo muutuja `z`.
   *  Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
   *  Pane ühte vektorisse keskväärtuse hinanngu ning vahemikhinnangu alumise ja ülemise piiri väärtused.
-  *  Väljasta väärtused vektorist `interval_estimate` ümardades väärtuseid ühe kohani peale koma (vihje: `round()`).
+  *  Väljasta väärtused vektorist `hinnangud` ümardades väärtused ühe komakohani (vihje: `round()`).
   
 *** =hint
 *  Standardvea valemiks on $s/sqrt(n)$.
