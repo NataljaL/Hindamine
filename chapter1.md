@@ -385,7 +385,7 @@ Sageli on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast pea
 
 *** =instructions
 
-  *  Vektor `temperatuur` on kättesaadav.
+  *  Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. 
   *  Täienda kood: leia `mu_hat` (valimikeskmine) ja `s` (valimistandardhälve). Seejärel leia standardviga, funktsiooni `sqrt()` rakenda ruutjuure leidmiseks.
   *  Leia täiendkvantiili `\bar z_{\alpha/2}` väärtuse usaldusnivool 99% ($\alpha$ = 0.01) ja loo muutuja `z`.
   *  Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
@@ -397,21 +397,24 @@ Sageli on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast pea
 
 *** =pre_exercise_code
 ```{r}
-temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
+set.seed(7)
+tulemused <- rnorm(75, 15, 1.5)
+tulemused <- round(tulemused, 1)
+
 ```
 
 *** =sample_code
 ```{r}
-# vektor temperatuur on juba loodud
+# vektor tulemused on juba loodud
 
 # Valimi maht:
-n <- length(temperatuur)
+n <- length(tulemused)
 
 # Valimikeskmine hindab üldkogumi keskväärtust:
-mu_hat <- mean(temperatuur)
+mu_hat <- mean(tulemused)
 
 # Valimi standardhälve:
-s <- sd(temperatuur)
+s <- sd(tulemused)
 
 # Leia standardviga asendades NA:
 st_viga <- NA
@@ -432,16 +435,16 @@ hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = 
 
 *** =solution
 ```{r}
-# vektor temperatuur on juba loodud
+# vektor tulemused on juba loodud
 
 # Valimi maht:
-n <- length(temperatuur)
+n <- length(tulemused)
 
 # Valimikeskmine hindab üldkogumi keskväärtust:
-mu_hat <- mean(temperatuur)
+mu_hat <- mean(tulemused)
 
 # Valimi standardhälve:
-s <- sd(temperatuur)
+s <- sd(tulemused)
 
 # Leia standardviga asendades NA:
 st_viga <- s/sqrt(n)
@@ -473,4 +476,34 @@ test_error()
 
 # Final message the student will see upon completing the exercise
 success_msg("Oled cool usaldusnivool 99%!")
+```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:7a234fe95f
+## Valimikeskmise jaotus
+
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
 ```
