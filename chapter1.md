@@ -659,7 +659,7 @@ for(i in 1:N) {
 n <- 70
 valim <- sample(tulemused, size = n, replace = F)
 
-# Leia saadud valimikeskmine
+# Leia saadud valimi keskmine
 mu_hat <- NA
 
 # Leia saadud valimi standardhälve
@@ -687,7 +687,7 @@ hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 n <- 70
 valim <- sample(tulemused, size = n, replace = F)
 
-# Leia saadud valimikeskmine
+# Leia saadud valimi keskmine
 mu_hat <- mean(valim)
 
 # Leia saadud valimi standardhälve
