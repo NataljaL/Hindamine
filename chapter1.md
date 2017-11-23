@@ -499,12 +499,13 @@ Mõnikord küsitakse, kuuidas siin tekib normaaljaotus ja selletäiendkvantiil? 
 
 
 *** =instructions
-  *  Create objects points, n, mu_hat and s
-  *  Adjust the code: Compute the standard error of mu_hat (the sample mean) and save t to object error. sqrt() computes the square root.
-  *  Compute the critical value z using a 99% confidence level (alpha = 0.01) and create object z
-  *  Compute the lower and upper limits of the confidence interval (CI) by applying the formula given above
-  *  Combine the point estimate and the lower and upper CI values to the object interval_estimate.
-  *  Print the values in interval_estimate, rounded to 1 digit (hint: round())
+  *  Vektor `tulemused` sisaldab 1. kontrolltöö tulemusi.
+  *  Leia vektori pikkus (valimimaht), tulemuste keskmine ja standardhälve.
+  *  Täienda kood arvutades keskmise standardviga. Funktsiooni `sqrt()` abil saab leida ruutjuure.
+  *  Leia täiendkvantiili $\bar z_{\alpha/2}$ väärtus usaldusnivool 99%  ($\alpha$ = 0.01) ja loo muutuja `z`.
+  *  Arvuta vahemikhinnangu alumine ja ülemine piir kasutades ülalpool toodud valemit.
+  *  Pane kokku ühte vektorisse kolme väärtust: punkthinnangut, alumist ja ülemist piiri.
+  *  Väljasta saadud vektori väärtused ümardades neid ühe kohani peale koma (vihje: `round()`).
 
 *** =hint
 *  The formula for the standard error is s/sqrt(n)
