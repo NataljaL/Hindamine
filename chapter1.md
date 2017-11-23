@@ -616,13 +616,13 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
  *  Loo muutja `n` ja võta juhuslik valim mahuga 50 tudegite tulemustest. Salvesta see muutujasse `valim`.
    *  Leia `mu_hat`, `s` ja `st_viga`.
    * Väljasta `mu_hat` ja selle standardviga ümardades kahe komakohani.
-   * Inside dnorm(), set the argument mean = the estimate of the population mean of the exam points, based on the random sample of size 50
-   *  Inside dnorm() set the argument sd = the standard error (the estimate of the standard deviation) of the mean, based on the random sample of size 50
-   *  Execute the line with hist() and curve(), which visualize (1) the previously simulated sampling distribution of the means, and (2) a normal approximation to that distribution based on the random sample of size 50. (Techically its two lines of code: ; is code for line change)
-   *  Does the normal approximation seem useful?
+   * Sea funktsiooni `dnorm()` argumendid nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `st_viga`.
+   *  Käivita rida, mis sisaldab funktsiooni `hist()` ja funktsiooni `curve()`, mis visualiseerivad (1) eelmises harjutuses simuleeritud valimikeskmiste jaotust ja (2) normaaljaotusele vastavat joont, mille parameetriteks on valim mahuga 50. (Tehniliselt on siin tegemist kahe käsuga; märk `;` eraldab kahte käsku).
+   *  Normaaljatus tundub siin sobivaks?
 *** =hint
- * mu_hat is the sample mean (the estimate of the population mean)
-   * error is the standard error of the sample mean
+ * `mu_hat` on valimikeskmine, mille leidmiseks kasuta funktsiooni `mean()`.
+   * `st_error` vastab valimikeskmise standardveale ja seda saab leida järgmiselt: $s/\sqrt{n}$.
+   
 *** =pre_exercise_code
 ```{r}
 set.seed(7)
