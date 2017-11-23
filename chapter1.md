@@ -398,7 +398,7 @@ Sageli on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast pea
 *** =pre_exercise_code
 ```{r}
 set.seed(7)
-tulemused <- rnorm(75, 15, 1.5)
+tulemused <- rnorm(175, 15, 1.5)
 tulemused <- round(tulemused, 1)
 
 ```
@@ -511,7 +511,7 @@ Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me
 *** =pre_exercise_code
 ```{r}
 set.seed(7)
-tulemused <- rnorm(75, 15, 1.5)
+tulemused <- rnorm(175, 15, 1.5)
 tulemused <- round(tulemused, 1)
 
 set.seed(888)
@@ -529,11 +529,11 @@ keskmised <- numeric(N)
 
 
 # Korda N korda: 
-  # (1) võta juhuslik valim pikkusega  n = 50  vektorist tulemused
+  # (1) võta juhuslik valim pikkusega  n = 70  vektorist tulemused
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  valim <- sample(tulemused, size = 50, replace = F)
+  valim <- sample(tulemused, size = 70, replace = F)
   keskmised[i] <- mean(valim)
 }
 
@@ -560,11 +560,11 @@ keskmised <- numeric(N)
 keskmised
 
 # Korda N korda: 
-  # (1) võta juhuslik valim pikkusega  n = 50  vektorist tulemused
+  # (1) võta juhuslik valim pikkusega  n = 70  vektorist tulemused
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  valim <- sample(tulemused, size = 50, replace = F)
+  valim <- sample(tulemused, size = 70, replace = F)
   keskmised[i] <- mean(valim)
 }
 
@@ -613,11 +613,11 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
 Ülalpool toodud vahemikhinnang põhinebki asümptootilise normaaljaotuse eeldusel. Antud harjutuses uurimegi, et tegelikult töötab tsentraalne piirteoreem üsna hästi suuremahuliste valimite korral.
 
 *** =instructions
- *  Loo muutja `n` ja võta juhuslik valim mahuga 50 tudegite tulemustest. Salvesta see muutujasse `valim`.
+ *  Loo muutja `n` ja võta juhuslik valim mahuga 70 tudegite tulemustest. Salvesta see muutujasse `valim`.
    *  Leia `mu_hat`, `s` ja `st_viga`.
    * Väljasta `mu_hat` ja selle standardviga ümardades kahe komakohani.
    * Sea funktsiooni `dnorm()` argumendid nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `st_viga`.
-   *  Käivita rida, mis sisaldab funktsiooni `hist()` ja funktsiooni `curve()`, mis visualiseerivad (1) eelmises harjutuses simuleeritud valimikeskmiste jaotust ja (2) normaaljaotusele vastavat joont, mille parameetriteks on valim mahuga 50. (Tehniliselt on siin tegemist kahe käsuga; märk `;` eraldab kahte käsku).
+   *  Käivita rida, mis sisaldab funktsiooni `hist()` ja funktsiooni `curve()`, mis visualiseerivad (1) eelmises harjutuses simuleeritud valimikeskmiste jaotust ja (2) normaaljaotusele vastavat joont, mille parameetriteks on valim mahuga 70. (Tehniliselt on siin tegemist kahe käsuga; märk `;` eraldab kahte käsku).
    *  Normaaljatus tundub siin sobivaks?
 *** =hint
  * `mu_hat` on valimikeskmine, mille leidmiseks kasuta funktsiooni `mean()`.
@@ -626,7 +626,7 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
 *** =pre_exercise_code
 ```{r}
 set.seed(7)
-tulemused <- rnorm(75, 15, 1.5)
+tulemused <- rnorm(175, 15, 1.5)
 tulemused <- round(tulemused, 1)
 
 set.seed(888)
@@ -638,11 +638,11 @@ keskmised <- numeric(N)
 keskmised
 
 # Korda N korda: 
-  # (1) võta juhuslik valim pikkusega  n = 50  vektorist tulemused
+  # (1) võta juhuslik valim pikkusega  n = 70  vektorist tulemused
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  valim <- sample(tulemused, size = 50, replace = F)
+  valim <- sample(tulemused, size = 70, replace = F)
   keskmised[i] <- mean(valim)
 }
 
@@ -655,8 +655,8 @@ for(i in 1:N) {
 # vektor tulemused on kätte saadav
 
 
-# Võta juhuslik valim mahuga 50 vektorist tulemused
-n <- 50
+# Võta juhuslik valim mahuga 70 vektorist tulemused
+n <- 70
 valim <- sample(tulemused, size = n, replace = F)
 
 # Leia saadud valimikeskmine
@@ -684,8 +684,8 @@ hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 # vektor tulemused on kätte saadav
 
 
-# Võta juhuslik valim mahuga 50 vektorist tulemused
-n <- 50
+# Võta juhuslik valim mahuga 70 vektorist tulemused
+n <- 70
 valim <- sample(tulemused, size = n, replace = F)
 
 # Leia saadud valimikeskmine
