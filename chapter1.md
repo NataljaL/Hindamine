@@ -596,3 +596,42 @@ test_error()
 # Final message the student will see upon completing the exercise
 success_msg("Väga tubli töö!")
 ```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:76ded038cc
+## Tsentraalne piirteoreem
+
+Nüüd uurime vahemikhinnangut üldkogumi keskväärtusele veel kord:
+
+$$\bar{x} \pm \bar z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
+
+kus $\bar z_{\alpha / 2}$ on jaotuse $N(0,1)$ $\alpha/2$-täiendkvantiil. Milline on seos normaaljaotuse ja valimikeskmise jaotuse vahel?
+
+Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile on summa asümptootilise normaaljatusega (st, et mida suurem on valimimaht $n$, seda "ilusamat" normaaljatust saame).
+
+Ülalpool toodud vahemikhinnang põhinebki asümptootilise normaaljaotuse eeldusel. Antud harjutuses uurimegi, et tegelikult töötab tsentraalne piirteoreem üsna hästi suuremahuliste valimite korral.
+
+*** =instructions
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
