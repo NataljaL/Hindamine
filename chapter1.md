@@ -533,7 +533,7 @@ keskmised <- numeric(N)
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  valim <- sample(tulemused, size = 70, replace = F)
+  valim <- sample(tulemused, size = 70, replace = T)
   keskmised[i] <- mean(valim)
 }
 
@@ -564,7 +564,7 @@ keskmised
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  valim <- sample(tulemused, size = 70, replace = F)
+  valim <- sample(tulemused, size = 70, replace = T)
   keskmised[i] <- mean(valim)
 }
 
@@ -629,7 +629,7 @@ set.seed(7)
 tulemused <- rnorm(175, 15, 1.5)
 tulemused <- round(tulemused, 1)
 
-set.seed(888)
+set.seed(19)
 # Loo tühi vektor pikkusega N
 N <- 100
 keskmised <- numeric(N)
@@ -642,7 +642,7 @@ keskmised
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
 for(i in 1:N) {
-  valim <- sample(tulemused, size = 70, replace = F)
+  valim <- sample(tulemused, size = 70, replace = T)
   keskmised[i] <- mean(valim)
 }
 
