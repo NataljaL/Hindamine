@@ -483,6 +483,20 @@ success_msg("Oled cool usaldusnivool 99%!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:7a234fe95f
 ## Valimikeskmise jaotus
 
+On selge, et juhusliku valimi põhjal leitud keskmine on ise juhusliku loomuga. Kuidas oleks võimalik seda juhuslikkust ära kirjeldada? Üks võimalus on leida vahemikhinnang, mille keskkohaks on valimikeskmine.
+
+Teoorias on tõestatud, et järgmine vahemikhinnang sisaldab üldkogumi keskväärtust  $100 \cdot (1-\alpha)$% juhul 100-st:
+
+$$\bar{x} \pm \bar z_{\alpha / 2} \cdot \frac{s}{\sqrt{n}}$$
+
+kus $s$ valimi standardhälve, $n$ on valimimaht ja $\bar z_{\alpha / 2}$ on jaotuse $N(0,1)$ täiendkvantiil. Sageli nimetatakse avaldise osa
+
+$$\frac{s}{\sqrt{n}}$$
+
+keskmise $\bar{x}$ standardveaks.
+
+Mõnikord küsitakse, kuuidas siin tekib normaaljaotus ja selletäiendkvantiil? Vastus peidub valimikeskmise jaotuses ja me uurime seda.
+
 
 *** =instructions
 
