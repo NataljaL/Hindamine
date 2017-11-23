@@ -646,14 +646,6 @@ for(i in 1:N) {
   keskmised[i] <- mean(valim)
 }
 
-# Prindi keskmiste vektor uuesti välja:
-keskmised
-
-# Arvuta selle arvkarakteristikud:
-summary(keskmised)
-
-#  Visualiseeri keskmised histogrammi abil:
-hist(keskmised, freq = F)
 
 ```
 
@@ -681,7 +673,7 @@ c(mu_hat, st_viga)
 
 # (1) Histogram of the previously simulated sample means and
 # (2) The normal approximation of that distribution, based on a single sample
-hist(means, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
+hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 
 
 ```
