@@ -216,7 +216,7 @@ success_msg("Tubli töö!")
 ## Tsükkel `for`
 Programmeerimis- ja simuleerimisülesannetes on vaja sageli korrata ühte ja sama tegevust mitu korda (näiteks jaotuse kontrollimiseks). Tsükkel `for` on kõige levinum viis korduste teostamiseks. Selle süntaks näeb välja järgmiselt:
 
-`for (loendur in vektor) {`\n
+`for (loendur in vektor) {`\newline
   `käsk`\n
  ` veel käske`\n
 `}`
