@@ -301,7 +301,7 @@ Statistikas tähistatakse tavaliselt hinnanguid katusemärgi (hat) abil. Näitek
 *** =instructions
 
  *   Ühe kuu temperatuuride vektor on juba loodud. Vaata.
-  *  Hinda temperatuuride keskväärtust. Kui sa ei mäleta, millist funktsiooni kasutada, siis kasuta oma lemmikut otsingumootorit või võta vihjet.
+  *  Hinda temperatuuride keskväärtust. Kui sa ei mäleta, millist funktsiooni kasutada, siis võid googeldada või kasutada vihjet.
   *  Hinda temperatuuride standardhälbe.
   *  Kombineeri mõlemad hinnangud ühte vektorisse (asenda `NA`). Pane ka tähele, kuidas käsus `c()` saab väärtustele anda nimesid.
   *  Väljasta saadud vektori väärtused ümardades neid 2 kohani peale koma.
