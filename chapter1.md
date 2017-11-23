@@ -652,27 +652,27 @@ for(i in 1:N) {
 *** =sample_code
 ```{r}
 
-# learning214 and means are available
+# vektor tulemused on kätte saadav
 
 
-# Draw a single sample of n = 50 exam points
+# Võta juhuslik valim mahuga 50 vektorist tulemused
 n <- 50
 valim <- sample(tulemused, size = n, replace = F)
 
-# Compute the sample mean
+# Leia saadud valimikeskmine
 mu_hat <- NA
 
-# Compute the sample standard deviation
+# Leia saadud valimi standardhälve
 s <- NA
 
-# Compute the standard error of the mean
+# Leia valimikeskmise standardviga
 st_viga <- NA
 
-# Round and print
+# Ümarda ja väljasta
 c(mu_hat, st_viga)
 
-# (1) Histogram of the previously simulated sample means and
-# (2) The normal approximation of that distribution, based on a single sample
+# (1) Eelmises harjutuses simuleeritud keskmiste histogramm
+# (2) Normaaljatuse kõver, mis põhineb saadud valimil
 hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 
 
@@ -681,36 +681,37 @@ hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 *** =solution
 ```{r}
 
-# learning214 and means are available
+# vektor tulemused on kätte saadav
 
 
-# Draw a single sample of n = 50 exam points
+# Võta juhuslik valim mahuga 50 vektorist tulemused
 n <- 50
-points_sample <- sample(learning2014$points, size = n, replace = F)
+valim <- sample(tulemused, size = n, replace = F)
 
-# Compute the sample mean
-mu_hat <- mean(points_sample)
+# Leia saadud valimikeskmine
+mu_hat <- mean(valim)
 
-# Compute the sample standard deviation
-s <- sd(points_sample)
+# Leia saadud valimi standardhälve
+s <- sd(valim)
 
-# Compute the standard error of the mean
-error <- s/ sqrt(n)
+# Leia valimikeskmise standardviga
+st_viga <- s/sqrt(n)
 
-# print
-c(mu_hat, error)
+# Ümarda ja väljasta
+c(mu_hat, st_viga)
 
-# (1) Histogram of the previously simulated sample means and
-# (2) The normal approximation of that distribution, based on a single sample
-hist(means, freq = F); curve(dnorm(x, mean = mu_hat, sd = error), add = T)
+# (1) Eelmises harjutuses simuleeritud keskmiste histogramm
+# (2) Normaaljatuse kõver, mis põhineb saadud valimil
+hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 
 
 ```
 
 *** =sct
 ```{r}
+test_object("mu_hat")
 test_object("s")
-test_object("error")
+test_object("st_viga")
 
 test_function("dnorm", args = c("mean","sd"))
 
@@ -718,6 +719,6 @@ test_function("dnorm", args = c("mean","sd"))
 test_error()
 
 # Final message the student will see upon completing the exercise
-success_msg("Very well done!! You are making really good progress!")
+success_msg("Suurepäraselt tehtud!! Sa teed tõeliselt suuri edusamme!")
 
 ```
