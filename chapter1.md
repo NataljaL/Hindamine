@@ -652,7 +652,6 @@ for(i in 1:N) {
 
 *** =sample_code
 ```{r}
-
 # vektor tulemused on kätte saadav
 
 
@@ -666,7 +665,7 @@ mu_hat <- NA
 # Leia saadud valimi standardhälve
 s <- NA
 
-# Leia valimikeskmise standardviga
+# Leia valimi keskmise standardviga
 st_viga <- NA
 
 # Ümarda ja väljasta
@@ -681,7 +680,6 @@ hist(keskmised, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
 
 *** =solution
 ```{r}
-
 # vektor tulemused on kätte saadav
 
 
@@ -695,7 +693,7 @@ mu_hat <- mean(valim)
 # Leia saadud valimi standardhälve
 s <- sd(valim)
 
-# Leia valimikeskmise standardviga
+# Leia valimi keskmise standardviga
 st_viga <- s/sqrt(n)
 
 # Ümarda ja väljasta
