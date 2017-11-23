@@ -495,25 +495,98 @@ Reaalses elus me seda teha ei saa, kuna meil on olemas vaid üks valim. Või sii
 Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me saame jaotust simuleerida! See meetod (kannab nimetust bootstrap = taasvalik) on väga levinud statistikas.
 
 *** =instructions
-
+*  Create N and means and print out the empty means vector
+  *  Execute the for-loop. What does it do?
+  *  Print out the means vector again
+  *  Compute basic summary statistics of means using the appropriate function
+  *  Draw a histogram displaying the sampling disribution of the means
+  *  See the help page of the hist() function and make it a density histogram
 *** =hint
-
+ *   summary() computes basic summary statistics
+ *   hist() draws a histogram and the argument freq = F can be used to draw a density histogram
+ *   ?hist opens the help page of hist()
 *** =pre_exercise_code
 ```{r}
-
+set.seed(888)
 ```
 
 *** =sample_code
 ```{r}
+# learning2014 is available
+
+# Create an empty vector of length N
+N <- 100
+means <- numeric(N)
+
+# Print out the empty vector
+
+
+# Repeat N times: 
+  # (1) draw a random sample of n = 50 exam points
+  # (2) compute the mean of the sampled exam points and 
+  # (3) store it in the means vector
+for(i in 1:N) {
+  points_sample <- sample(learning2014$points, size = 50, replace = F)
+  means[i] <- mean(points_sample)
+}
+
+# Print out the means vector
+
+
+# Compute basic summary statistics
+
+
+# Visualize the distribution of the means with a histogram
+
 
 ```
 
 *** =solution
 ```{r}
 
+# learning2014 is available
+
+# Create an empty vector of length N (size of our experiment)
+N <- 100
+means <- numeric(N)
+
+# Print out the empty vector
+means
+
+# Repeat N times: 
+  # (1) draw a random sample of n = 50 exam points
+  # (2) compute the mean of the sampled exam points and 
+  # (3) store it in the means vector
+for(i in 1:N) {
+  points_sample <- sample(learning2014$points, size = 50, replace = F)
+  means[i] <- mean(points_sample)
+}
+
+# Print out the means vector
+means
+
+# Compute basic summary statistics
+summary(means)
+
+# Visualize the distribution of the means with a histogram
+hist(means, freq = F)
+
+
 ```
 
 *** =sct
 ```{r}
 
+# submission correctness tests
+
+test_output_contains("numeric(N)")
+test_output_contains("means")
+test_function("summary", args=c("object"))
+test_function("hist", args=c("x","freq"))
+
+# test if the students code produces an error
+test_error()
+
+# Final message the student will see upon completing the exercise
+success_msg("Very good work!")
 ```
