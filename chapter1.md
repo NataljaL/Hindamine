@@ -381,7 +381,7 @@ $$\frac{s}{\sqrt{n}}$$
 
 suuruse $\bar{x}$ standardveaks.
 
-Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast peaks kasutama $z_{\alpha/2}$? Vastused peituvad valimikeskmise $\bar x$ jaotuses ja varsti me seda uurime.
+Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast peaks kasutama $\bar z_{\alpha/2}$? Vastused peituvad valimikeskmise $\bar x$ jaotuses ja varsti me seda ka uurime.
 
 
 *** =instructions
