@@ -257,7 +257,7 @@ for(i in 1:5) {
   print(i + 5)
 }
 
-# Kirjuta oma tsükke, mis väljastab  "One more time!" 27 korda:
+# Kirjuta oma tsükkel, mis väljastab  "One more time!" 27 korda:
 
 ```
 
@@ -273,7 +273,7 @@ for(i in 1:5) {
   print(i + 5)
 }
 
-# Kirjuta oma tsükke, mis väljastab  "One more time!" 27 korda:
+# Kirjuta oma tsükkel, mis väljastab  "One more time!" 27 korda:
 for(i in 1:27) {
   print("One more time!")
 }
