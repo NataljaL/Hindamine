@@ -617,7 +617,7 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
  *  Loo muutja `n` ja võta juhuslik valim mahuga 70 tudegite tulemustest. Salvesta see muutujasse `valim`.
    *  Leia `mu_hat`, `s` ja `st_viga`.
    * Väljasta `mu_hat` ja selle standardviga ümardades kahe komakohani.
-   * Sea funktsiooni `dnorm()` argumendid nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `st_viga`.
+   * Omista funktsiooni `dnorm()` argumentidele väärtused nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `st_viga`.
    *  Käivita rida, mis sisaldab funktsiooni `hist()` ja funktsiooni `curve()`, mis visualiseerivad (1) eelmises harjutuses simuleeritud valimikeskmiste jaotust ja (2) normaaljaotusele vastavat joont, mille parameetriteks on valim mahuga 70. (Tehniliselt on siin tegemist kahe käsuga; märk `;` eraldab kahte käsku).
    *  Normaaljatus tundub siin sobivaks?
 *** =hint
