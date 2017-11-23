@@ -613,25 +613,106 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
 Ülalpool toodud vahemikhinnang põhinebki asümptootilise normaaljaotuse eeldusel. Antud harjutuses uurimegi, et tegelikult töötab tsentraalne piirteoreem üsna hästi suuremahuliste valimite korral.
 
 *** =instructions
-
+ *  Create object n and take a random sample of 50 students exam points and create object points_sample
+   *  Create objects mu_hat, s and error
+   * Print out mu_hat and its standard error, rounded to 2 digits
+   * Inside dnorm(), set the argument mean = the estimate of the population mean of the exam points, based on the random sample of size 50
+   *  Inside dnorm() set the argument sd = the standard error (the estimate of the standard deviation) of the mean, based on the random sample of size 50
+   *  Execute the line with hist() and curve(), which visualize (1) the previously simulated sampling distribution of the means, and (2) a normal approximation to that distribution based on the random sample of size 50. (Techically its two lines of code: ; is code for line change)
+   *  Does the normal approximation seem useful?
 *** =hint
-
+ * mu_hat is the sample mean (the estimate of the population mean)
+   * error is the standard error of the sample mean
 *** =pre_exercise_code
 ```{r}
+set.seed(888)
 
+# Create an empty vector of length N (size of the simulation)
+N <- 100
+means <- numeric(N)
+
+# Repeat N times: 
+  # (1) draw a random sample of n = 50 exam points
+  # (2) compute the mean of the sampled exam points and 
+  # (3) store it in the means vector
+for(i in 1:N) {
+  points_sample <- sample(learning2014$points, size = 50, replace = F)
+  means[i] <- mean(points_sample)
+}
+
+# Visualize the distribution of the means with a histogram
+hist(means, freq = F)
 ```
 
 *** =sample_code
 ```{r}
+
+# learning214 and means are available
+
+
+# Draw a single sample of n = 50 exam points
+n <- 50
+points_sample <- sample(learning2014$points, size = n, replace = F)
+
+# Compute the sample mean
+mu_hat <- mean(points_sample)
+
+# Compute the sample standard deviation
+s <- NA
+
+# Compute the standard error of the mean
+error <- NA
+
+# Round and print
+c(mu_hat, error)
+
+# (1) Histogram of the previously simulated sample means and
+# (2) The normal approximation of that distribution, based on a single sample
+hist(means, freq = F); curve(dnorm(x, mean = NA, sd = NA), add = T)
+
 
 ```
 
 *** =solution
 ```{r}
 
+# learning214 and means are available
+
+
+# Draw a single sample of n = 50 exam points
+n <- 50
+points_sample <- sample(learning2014$points, size = n, replace = F)
+
+# Compute the sample mean
+mu_hat <- mean(points_sample)
+
+# Compute the sample standard deviation
+s <- sd(points_sample)
+
+# Compute the standard error of the mean
+error <- s/ sqrt(n)
+
+# print
+c(mu_hat, error)
+
+# (1) Histogram of the previously simulated sample means and
+# (2) The normal approximation of that distribution, based on a single sample
+hist(means, freq = F); curve(dnorm(x, mean = mu_hat, sd = error), add = T)
+
+
 ```
 
 *** =sct
 ```{r}
+test_object("s")
+test_object("error")
+
+test_function("dnorm", args = c("mean","sd"))
+
+# test if the students code produces an error
+test_error()
+
+# Final message the student will see upon completing the exercise
+success_msg("Very well done!! You are making really good progress!")
 
 ```
