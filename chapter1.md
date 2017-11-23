@@ -619,8 +619,8 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
  * Leia selle vektori keskmine `mu_hat` ja standardhälve `s`.
  * Kasuta neid argumentidena funktsioonis `dnorm()` nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `s`.
  * Käivita rida `curve()`. See joonistab normaaljaotuse tihedusfunktsioonile vastavat kõverjoont.
- * Kas histogramm ja normaaljaotuse joon langevad kokku? Kui jah, valimikeskmise jaotuseks  sobibki  normaaljaotus.
- * 
+ * Kas histogramm ja normaaljaotuse joon langevad kokku? Kui jah, siis valimikeskmise jaotuseks  sobibki  normaaljaotus.
+ 
 *** =hint
  * `mu_hat` on valimikeskmine, mille leidmiseks kasuta funktsiooni `mean()`.
    * standardhälvet saab leida funktsiooni `sd()` abil.
