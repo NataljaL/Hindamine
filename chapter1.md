@@ -65,7 +65,7 @@ Väärtust saab muuta/vaadata, kasutades selleks vektori nime järel nurksulgude
 Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näites, kuidas saab manipuleerida indeksitega.
 
 *** =instructions
-* Loome vektori `nimed` (käsk on juba kirjutatud).
+* Loo vektor `nimed` (käsk on juba kirjutatud).
 * Uuri indeksite tööd käivitades näitekäske.
 * Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (just sellises järjekorras).
 * Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Peeter" and "Heikki" (just sellises järjekorras).
