@@ -485,7 +485,7 @@ success_msg("Oled cool usaldusnivool 99%!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:8213107e60
 ## Valimikeskmise jaotus
 
-Mäletad, et valimikeskmise jaotuses  on nagu teatud sorti mäng: kui oleks võimalik võtta juhuslike valimeid uuesti ja uuesti ning igakord arvutada valimikeskmist, siis tulemuseks saaksime valimikeskmise jaotuse.
+Mäletad, et valimikeskmise jaotuse leidmine  on nagu teatud sorti mäng: kui oleks võimalik võtta juhuslike valimeid uuesti ja uuesti ning igakord arvutada valimikeskmist, siis tulemuseks saaksime valimikeskmise jaotuse.
 
 Reaalses elus me seda teha ei saa, kuna meil on olemas vaid üks valim. Või siiski saame? Teeskleme korraks, et meil on olemas kogu üldkogumi andmed. Vaatame, mis juhtub, kui me korduvalt
 
