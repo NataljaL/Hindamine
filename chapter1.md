@@ -398,14 +398,15 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
 
 *** =instructions
 
-  1. Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. Uuri, kuidas on leitud valimimaht (läbi selle vektori pikkuse).
-  2. Leia `mu_hat` (valimikeskmise) (asendades NA)
-  3. Leia `s` (valimistandardhälbe). 
-  4. Kasutades `mu_hat` ja `s`, leia standardviga (ruutjuure leidmiseks rakenda funktsiooni `sqrt()`).
-  5. Uuri, kuidas on leitud muutuja `z`, mis vastab täiendkvantiili $\bar z_{\alpha/2}$ väärtusele usaldusnivool 99% ($\alpha$ = 0.01).
-  6. Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
-  7. Pane ühte vektorisse keskväärtuse hinanngu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
-  8. Kirjuta ise käsk, mis väljastab väärtuseid vektorist `hinnangud` ümardatuna ühe komakohani (vihje: `round()`).
+1. Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. Uuri, kuidas on leitud valimimaht (läbi selle vektori pikkuse).
+2. Leia `mu_hat` (valimikeskmise) (asendades NA)
+3. Leia `s` (valimistandardhälbe). 
+4. Kasutades `mu_hat` ja `s`, leia standardviga (ruutjuure leidmiseks rakenda funktsiooni `sqrt()`).
+5. Uuri, kuidas on leitud muutuja `z`, mis vastab täiendkvantiili $\bar z_{\alpha/2}$ väärtusele usaldusnivool 99% ($\alpha$ = 0.01).
+6. Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
+7. Pane ühte vektorisse keskväärtuse hinanngu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
+8. Kirjuta ise käsk, mis väljastab väärtuseid vektorist `hinnangud` ümardatuna ühe komakohani (vihje: `round()`).
+9. 
   
 *** =hint
 *  Standardvea valemiks on $\frac{s}{\sqrt{n}}$.
@@ -424,7 +425,7 @@ tulemused <- round(tulemused, 1)
 # 1. Valimi maht:
 n <- length(tulemused)
 
-# 2. Valimikeskmine hindab üldkogumi keskväärtust:
+# 2. Valimikeskmine:
 mu_hat <- NA
 
 # 3. Valimi standardhälve:
@@ -453,7 +454,7 @@ hinnangud <- c("punkthinnang" = NA, "alumine99%" = NA, "ülemine99%" = NA)
 # 1. Valimi maht:
 n <- length(tulemused)
 
-# 2. Valimikeskmine hindab üldkogumi keskväärtust:
+# 2. Valimikeskmine:
 mu_hat <- mean(tulemused)
 
 # 3. Valimi standardhälve:
