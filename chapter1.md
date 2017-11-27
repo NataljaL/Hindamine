@@ -510,13 +510,13 @@ Reaalses elus me seda teha ei saa, kuna meil on olemas vaid üks valim. Või sii
 Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me saame jaotust simuleerida! See meetod (kannab nimetust bootstrap = taasvalik) on väga levinud statistikas.
 
 *** =instructions
-*  1. kontrolltöö tulemuste vektor on kättesaadav. Teeskleme siin, et tegemist on kogu üldkogumiga.
-*  Loo muutujad `N` ja `keskmised` ning prindi välja tühi keskmiste vektor.
-  *  Käivita tsükkel `for`. Mida ta teostab?
-  *  Prindi keskmiste vektor uuesti.
-  *  Leia keskmiste vektori arvkarakteristikud kasutades funktsiooni `summary()`.
-  *  Joonista keskmiste põhjal histogramm.
-  *  Uuri `help`-is, kuidas muuta käsku `hist()` nii, et see väljastaks `y`-teljele sageduste asemel osakaale.
+*  (1. kontrolltöö tulemuste vektor on kättesaadav. Teeskleme siin, et tegemist on kogu üldkogumi andmetega.)
+*  1. Käivita käsud, mis loovad muutujaid `N` ja `keskmised` ning väljastavad tühja keskmiste vektori väärtuseid.
+  *  2. Käivita tsükkel `for`. Mida ta teostab?
+  *  3. Väljasta keskmiste vektor uuesti.
+  *  4. Uuri, mida väljastab käsk `summary()`.
+  *  **Ülesanne 1.** Kirjuta käsk, mis joonestab vektori `keskmised` põhjal histogrammi.
+  *  **Ülesanne 2.**Uuri `help`-is, kuidas muuta käsku `hist()` nii, et see väljastaks `y`-teljele sageduste asemel osakaale. Graafiku kuju ei muutu!
 
 *** =hint
 
@@ -534,16 +534,12 @@ set.seed(888)
 
 *** =sample_code
 ```{r}
-# vektor tulemused on kättesaadav
-
-# Loo tühi vektor pikkusega N
+# 1. Tühi vektor pikkusega N
 N <- 100
 keskmised <- numeric(N)
+keskmised
 
-# Prindi tühi keskmiste vektor välja:
-
-
-# Korda N korda: 
+# 2. Korda N korda: 
   # (1) võta juhuslik valim pikkusega  n = 70  vektorist tulemused
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
@@ -552,29 +548,25 @@ for(i in 1:N) {
   keskmised[i] <- mean(valim)
 }
 
-# Prindi keskmiste vektor uuesti välja:
+# 3. Prindi keskmiste vektor uuesti välja:
+keskmised
 
+# 4. Funktsioon summary:
+summary(keskmised)
 
-# Arvuta selle arvkarakteristikud:
-
-
-# Visualiseeri keskmised histogrammi abil:
+# Ülesanded 1 ja 2. Visualiseeri keskmised histogrammi abil:
 
 
 ```
 
 *** =solution
 ```{r}
-# vektor tulemused on kättesaadav
-
-# Loo tühi vektor pikkusega N
+# 1. Tühi vektor pikkusega N
 N <- 100
 keskmised <- numeric(N)
-
-# Prindi tühi keskmiste vektor välja:
 keskmised
 
-# Korda N korda: 
+# 2. Korda N korda: 
   # (1) võta juhuslik valim pikkusega  n = 70  vektorist tulemused
   # (2) leia valimikeskmine
   # (3) salvesta saadud keskmine vektorisse keskmised
@@ -583,13 +575,13 @@ for(i in 1:N) {
   keskmised[i] <- mean(valim)
 }
 
-# Prindi keskmiste vektor uuesti välja:
+# 3. Prindi keskmiste vektor uuesti välja:
 keskmised
 
-# Arvuta selle arvkarakteristikud:
+# 4. Funktsioon summary:
 summary(keskmised)
 
-#  Visualiseeri keskmised histogrammi abil:
+# Ülesanded 1 ja 2. Visualiseeri keskmised histogrammi abil:
 hist(keskmised, freq = F)
 
 
@@ -603,7 +595,7 @@ hist(keskmised, freq = F)
 test_output_contains("numeric(N)")
 test_output_contains("keskmised")
 test_function("summary", args=c("object"))
-test_function("hist", args=c("x","freq"))
+test_function("hist", args=c("x","freq"), incorrect_msg = c("Funktsiooni `hist` 1. argumendiks on uuritava vektori nimi", "Osakaalude joonistamiseks y-teljele lisa funktsiooni `hist` argumediks `freq = FALSE`"))
 
 # test if the students code produces an error
 test_error()
