@@ -365,6 +365,7 @@ round(hinnangud, digits = 2)
 
 test_function("mean", args=c("x"))
 test_object("mu_hat", incorrect_msg = "Palun leia muutuja `mu_hat` väärtust. Kasuta õiget funktsiooni keskmise leidmiseks.")
+test_object("sigma_hat", incorrect_msg = "Palun leia muutuja `sigma_hat` väärtust kasutades funktsiooni `sd()`.")
 
 test_output_contains("round(hinnangud, 2)", incorrect_msg = "Asenda väärtused `NA` vektoris `hinnangud` nõutud väärtustega!")
 
