@@ -93,10 +93,10 @@ nimed[1] <- "Heikki"
 # 1. ja 3. element
 nimed[c(1, 3)]
 
-# Ülesanne 1.
+# Ülesanne 1
 tydrukud <-
 
-# Ülesanne 2.
+# Ülesanne 2
 poisid <-
 ```
 
@@ -114,10 +114,10 @@ nimed[1] <- "Heikki"
 # 1. ja 3. element
 nimed[c(1, 3)]
 
-# Ülesanne 1.
+# Ülesanne 1
 tydrukud <- nimed[c(3, 4)]
 
-# Ülesanne 2.
+# Ülesanne 2
 poisid <- nimed[c(2, 1)]
 ```
 
