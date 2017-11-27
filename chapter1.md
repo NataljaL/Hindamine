@@ -515,7 +515,7 @@ Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me
   *  2. Käivita tsükkel `for`. Mida ta teostab?
   *  3. Väljasta keskmiste vektor uuesti.
   *  4. Uuri, mida väljastab käsk `summary()`.
-  *  **Ülesanne 1.** Kirjuta käsk, mis joonestab vektori `keskmised` põhjal histogrammi.
+  *  **Ülesanne 1.** Kirjuta käsk, mis joonestab vektori `keskmised` põhjal histogrammi. KAs meenutab normaaljaotust?
   *  **Ülesanne 2.**Uuri `help`-is, kuidas muuta käsku `hist()` nii, et see väljastaks `y`-teljele sageduste asemel osakaale. Graafiku kuju ei muutu!
 
 *** =hint
