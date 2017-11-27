@@ -335,7 +335,7 @@ mu_hat <-
 sigma_hat <- sd(temperatuur)
 
 # Hinnangute kombineerimine vektorisse ja ümardamine:
-hinnangud <- c("mu_hat" = mu_hat, "sigma_hat" = sigma_hat)
+hinnangud <- c("mu_hat" = NA, "sigma_hat" = NA)
 round(hinnangud, digits = 2)
 
 ```
