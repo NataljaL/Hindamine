@@ -398,12 +398,14 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
 
 *** =instructions
 
-  *  Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. 
-  *  Täienda kood: leia `mu_hat` (valimikeskmine) ja `s` (valimistandardhälve). Seejärel leia standardviga (funktsiooni `sqrt()` rakenda ruutjuure leidmiseks).
-  *  Leia täiendkvantiili $\bar z_{\alpha/2}$ väärtuse usaldusnivool 99% ($\alpha$ = 0.01) ja loo muutuja `z`.
-  *  Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
-  *  Pane ühte vektorisse keskväärtuse hinanngu ning vahemikhinnangu alumise ja ülemise piiri väärtused.
-  *  Väljasta väärtused vektorist `hinnangud` ümardades väärtused ühe komakohani (vihje: `round()`).
+  1.  Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. Uuri, kuidas on leitud valimimaht (läbi selle vektori pikkuse).
+  2.  Leia `mu_hat` (valimikeskmine) (asendades NA)
+  3.  Leia `s` (valimistandardhälve). 
+  4.  Kasutades `mu_hat` ja `s`, leia standardviga (funktsiooni `sqrt()` rakenda ruutjuure leidmiseks).
+  5  Uuri, kuidas on leitud muutuja `z`, mis vastab täiendkvantiili $\bar z_{\alpha/2}$ väärtusele usaldusnivool 99% ($\alpha$ = 0.01).
+  6.  Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
+  7.  Pane ühte vektorisse keskväärtuse hinanngu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
+  8.  Kirjuta ise käsk, mis väljastab väärtuseid vektorist `hinnangud` ümardatuna ühe komakohani (vihje: `round()`).
   
 *** =hint
 *  Standardvea valemiks on $\frac{s}{\sqrt{n}}$.
@@ -418,70 +420,70 @@ tulemused <- round(tulemused, 1)
 
 *** =sample_code
 ```{r}
-# vektor tulemused on juba loodud
-
-# Valimi maht:
+# (Vektor tulemused on juba loodud)
+# 1. Valimi maht:
 n <- length(tulemused)
 
-# Valimikeskmine hindab üldkogumi keskväärtust:
-mu_hat <- mean(tulemused)
+# 2. Valimikeskmine hindab üldkogumi keskväärtust:
+mu_hat <- NA
 
-# Valimi standardhälve:
-s <- sd(tulemused)
+# 3. Valimi standardhälve:
+s <- NA
 
-# Leia standardviga asendades NA:
+# 4. Leia standardviga asendades NA:
 st_viga <- NA
 
-# Täiendkvantiili väärtus:
+# 5. Täiendkvantiili väärtus:
 z <- qnorm(0.01/2, lower.tail = F) 
 
-# Vahemikhinnangu alumine ja ülemine piir:
+# 6. Vahemikhinnangu alumine ja ülemine piir:
 al_piir <- mu_hat - NA
 yl_piir <- mu_hat + NA
 
-# Kolm arvu ühte vektorisse:
-hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
+# 7. Kolm arvu ühte vektorisse:
+hinnangud <- c("punkthinnang" = NA, "alumine99%" = NA, "ülemine99%" = NA)
 
-# Ümarda hinnangud 1 kohani peale koma:
+# 8. Ümarda hinnangud 1 kohani peale koma:
 
 ```
 
 *** =solution
 ```{r}
-# vektor tulemused on juba loodud
-
-# Valimi maht:
+# (Vektor tulemused on juba loodud)
+# 1. Valimi maht:
 n <- length(tulemused)
 
-# Valimikeskmine hindab üldkogumi keskväärtust:
+# 2. Valimikeskmine hindab üldkogumi keskväärtust:
 mu_hat <- mean(tulemused)
 
-# Valimi standardhälve:
+# 3. Valimi standardhälve:
 s <- sd(tulemused)
 
-# Leia standardviga asendades NA:
+# 4. Leia standardviga asendades NA:
 st_viga <- s/sqrt(n)
 
-# Täiendkvantiili väärtus:
+# 5. Täiendkvantiili väärtus:
 z <- qnorm(0.01/2, lower.tail = F) 
 
-# Vahemikhinnangu alumine ja ülemine piir:
+# 6. Vahemikhinnangu alumine ja ülemine piir:
 al_piir <- mu_hat - z*st_viga
 yl_piir <- mu_hat + z*st_viga
 
-# Kolm arvu ühte vektorisse:
+# 7. Kolm arvu ühte vektorisse:
 hinnangud <- c("punkthinnang" = mu_hat, "alumine99%" = al_piir, "ülemine99%" = yl_piir)
 
-# Ümarda hinnangud 1 kohani peale koma:
+# 8. Ümarda hinnangud 1 kohani peale koma:
 round(hinnangud, digits = 1)
 
 ```
 
 *** =sct
 ```{r}
-test_object("st_viga")
-test_object("al_piir")
-test_object("yl_piir")
+test_object("mu_hat", incorrect_msg = "Palun leia muutuja `mu_hat` väärtust kasutades funktsiooni `mean()`.")
+test_object("s", incorrect_msg = "Palun leia muutuja `sigma_hat` väärtust kasutades funktsiooni `sd()`.")
+test_object("st_viga", incorrect_msg = "`st_viga` on leitud valesti, kontrolli!")
+test_object("al_piir", incorrect_msg = "`al_piir` on leitud valesti, kontrolli!")
+test_object("yl_piir", incorrect_msg = "`yl_piir` on leitud valesti, kontrolli!")
 test_output_contains("round(hinnangud, digits = 1)")
 
 # test if the students code produces an error
