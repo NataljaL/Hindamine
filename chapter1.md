@@ -535,7 +535,7 @@ set.seed(888)
 *** =sample_code
 ```{r}
 # 1. Tühi vektor pikkusega N
-N <- 100
+N <- 1000
 keskmised <- numeric(N)
 keskmised
 
