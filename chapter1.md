@@ -595,7 +595,7 @@ hist(keskmised, freq = F)
 test_output_contains("numeric(N)")
 test_output_contains("keskmised")
 test_function("summary", args=c("object"))
-test_function("hist", args=c("x","freq"), incorrect_msg = c("Funktsiooni `hist` 1. argumendiks on uuritava vektori nimi", "Osakaalude joonistamiseks y-teljele lisa funktsiooni `hist` argumediks `freq = FALSE`"))
+test_function("hist", args=c("x","freq"), incorrect_msg = c("Funktsiooni `hist` 1. argumendiks on uuritava vektori nimi", "Osakaalude joonistamiseks y-teljele lisa funktsiooni `hist` argumediks `freq = FALSE`"), args_not_specified_msg=c("Funktsiooni `hist` 1. argumendiks on uuritava vektori nimi", "Osakaalude joonistamiseks y-teljele lisa funktsiooni `hist` argumediks `freq = FALSE`"))
 
 # test if the students code produces an error
 test_error()
