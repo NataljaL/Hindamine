@@ -144,11 +144,11 @@ Täisarvulise vektori loomiseks saab kasutada  `algus:lõpp` meetodit, mis loob 
 `c(1,2,3,4,5)`
 
 *** =instructions
-*  Loo täisarvuline vektor väärtustega 1 kuni 5 (kaasaarvatud).
-  *  Loo täisarvuline vektor väärtustega 2, 4, ..., 10.
-  *  Vektor `temperatuur` sisaldab ühe kuu õhutemperatuure (mõõdetud kell 12:00 Otepääl). Võta sellest seitsme päeva temperatuurid alatest vektori 5. elemendist.
-  *  Kasuta märki `:`, et luua täisarvuline vektor väärtustega 1, 2, ..., 10.
-  *  Võta vektorist `temperatuur` elemendid alatest  2. kuni 20-ni sammuga 2. Temperatuuri väärtused peavad vastama vektori `temperatuur` elementidele indeksitega: 2, 4, .. , 20.
+  * **Näide 1.** Uuri, kuidas on loodud täisarvuline vektor väärtustega 1 kuni 5 (kaasaarvatud).
+  * **Näide 2.** Uuri, kuidas on loodud täisarvuline vektor väärtustega 2, 4, ..., 10.
+  * **Näide 3.** Muutuja `temperatuur` sisaldab ühe kuu õhutemperatuure (mõõdetud kell 12:00 Otepääl). Uuri, kuidas on sellest võetud seitsme päeva temperatuurid alatest vektori 5. elemendist.
+  * **Ülesanne 1.** Kasuta märki `:`, et luua täisarvuline vektor väärtustega 1, 2, ..., 10.
+  * **Ülesanne 2.** Võta vektorist `temperatuur` elemendid alatest  2. kuni 20-ni sammuga 2. Temperatuuri väärtused peavad vastama vektori `temperatuur` elementidele indeksitega: 2, 4, .. , 20.
 
 *** =hint
 *  Kõigepealt läheb vaja vektorit elementidega 2, 4, .. , 20. Uuri näidet, kuidas sellist vektorit luua.
@@ -161,41 +161,45 @@ temperatuur <- c(16,14,17,13,11,19,20,18,17,17,17,14,13,16,16,15,14,14,13,10)
 
 *** =sample_code
 ```{r}
-# Vektor temperatuur on eelnevalt loodud
-
-# Loo vektor väärtustega 1,2,..,5:
+# Näide 1. Vektor väärtustega 1,2,..,5:
 1:5
 
-# Loo vektor väärtustega 2, 4, .. , 10:
+# Näide 2. Vektor väärtustega 2, 4, .. , 10:
 (1:5)*2
+
+# Näide 3.
+# Vektor temperatuur on eelnevalt loodud, uuri selle väärtuseid:
+temperatuur
 
 # Ühe nädala temperatuurid alates 5. elemendist (5, 6, 7, 8, 9, 10, 11):
 temperatuur[5:11]
 
-# Loo vektor väärtustega 1,2,..,10:
+# Ülesanne 1. Vektor väärtustega 1,2,..,10:
 
 
-# Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
+# Ülesanne 2. Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
 
 ```
 
 *** =solution
 ```{r}
-# Vektor temperatuur on eelnevalt loodud
-
-# Loo vektor väärtustega 1,2,..,5:
+# Näide 1. Vektor väärtustega 1,2,..,5:
 1:5
 
-# Loo vektor väärtustega 2, 4, .. , 10:
+# Näide 2. Vektor väärtustega 2, 4, .. , 10:
 (1:5)*2
+
+# Näide 3.
+# Vektor temperatuur on eelnevalt loodud, uuri selle väärtuseid:
+temperatuur
 
 # Ühe nädala temperatuurid alates 5. elemendist (5, 6, 7, 8, 9, 10, 11):
 temperatuur[5:11]
 
-# Loo vektor väärtustega 1,2,..,10:
+# Ülesanne 1. Vektor väärtustega 1,2,..,10:
 1:10
 
-# Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
+# Ülesanne 2. Võta vektorist `temperatuur` 2., 4., ..., 20. väärtused:
 temperatuur[(1:10)*2]
 ```
 
