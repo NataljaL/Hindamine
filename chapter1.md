@@ -480,7 +480,7 @@ round(hinnangud, digits = 1)
 *** =sct
 ```{r}
 test_object("mu_hat", incorrect_msg = "Palun leia muutuja `mu_hat` väärtust kasutades funktsiooni `mean()`.")
-test_object("s", incorrect_msg = "Palun leia muutuja `sigma_hat` väärtust kasutades funktsiooni `sd()`.")
+test_object("s", incorrect_msg = "Palun leia muutuja `s` väärtust kasutades funktsiooni `sd()`.")
 test_object("st_viga", incorrect_msg = "`st_viga` on leitud valesti, kontrolli!")
 test_object("al_piir", incorrect_msg = "`al_piir` on leitud valesti, kontrolli!")
 test_object("yl_piir", incorrect_msg = "`yl_piir` on leitud valesti, kontrolli!")
@@ -562,7 +562,7 @@ summary(keskmised)
 *** =solution
 ```{r}
 # 1. Tühi vektor pikkusega N
-N <- 100
+N <- 1000
 keskmised <- numeric(N)
 keskmised
 
@@ -621,10 +621,10 @@ Valimikeskmine on summa jagatud $n$-ga. Vastavalt tsentraalsele piirteoreemile o
 
 *** =instructions
  * Kasutame eelmises harjutuses loodud keskmiste vektorit.
- * Joonista selle vektori põhjal histogramm, mille vertikaalteljel on osakaalud.
- * Leia selle vektori keskmine `mu_hat` ja standardhälve `s`.
- * Kasuta neid argumentidena funktsioonis `dnorm()` nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `s`.
- * Käivita rida `curve()`. See joonistab normaaljaotuse tihedusfunktsioonile vastavat kõverjoont.
+ * **Ülesanne 1.** Joonista selle vektori põhjal histogramm, mille vertikaalteljel on osakaalud.
+ * **Ülesanne 2.** Leia selle vektori keskmine `mu_hat` ja standardhälve `s`.
+ * **Ülesanne 3.** Kasuta neid argumentidena funktsioonis `dnorm()` nii, et `mean =` leitud väärtusega `mu_hat` ja `sd = ` leitud väärtusega `s`.
+ * **Ülesanne 4.** Täienda  rida `curve()`, asendades väärtused `NA`. See joonistab normaaljaotuse tihedusfunktsioonile vastavat kõverjoont.
  * Kas histogramm ja normaaljaotuse joon langevad kokku? Kui jah, siis valimikeskmise jaotuseks  sobibki  normaaljaotus.
  
 *** =hint
@@ -639,7 +639,7 @@ tulemused <- round(tulemused, 1)
 
 
 # Loo tühi vektor pikkusega N
-N <- 100
+N <- 1000
 keskmised <- numeric(N)
 
 # Prindi tühi keskmiste vektor välja:
@@ -657,42 +657,38 @@ for(i in 1:N) {
 
 *** =sample_code
 ```{r}
-# Vektor keskmised on kätte saadav
-
-# Histogramm vektori keskmised põhjal. y-teljel - osakaalud!
+# Ülesanne 1. Loo histogramm vektori 'keskmised' põhjal. y-teljel - osakaalud!
 
 
-# Vektori 'keskmised' keskmine:
+# Ülesanne 2. Leia vektori 'keskmised' keskmise:
 mu_hat <- NA
 
-# Vektori 'keskmised' standardhälve:
+# Ülesanne 3. Leia vektori 'keskmised' standardhälve:
 s <- NA
 
-# Normaaljatuse kõver, mis põhineb leitud väärtustel
+# Ülesanne 4. Normaaljatuse kõver, mis põhineb leitud väärtustel (asenda 'NA'!)
 curve(dnorm(x, mean = NA, sd = NA), add = T)
 ```
 
 *** =solution
 ```{r}
-# Vektor keskmised on kätte saadav
-
-# Histogramm vektori keskmised põhjal. y-teljel - osakaalud!
+# Ülesanne 1. Loo histogramm vektori 'keskmised' põhjal. y-teljel - osakaalud!
 hist(keskmised, freq=F)
 
-# Vektori 'keskmised' keskmine:
+# Ülesanne 2. Leia vektori 'keskmised' keskmise:
 mu_hat <- mean(keskmised)
 
-# Vektori 'keskmised' standardhälve:
+# Ülesanne 3. Leia vektori 'keskmised' standardhälve:
 s <- sd(keskmised)
 
-# Normaaljatuse kõver, mis põhineb leitud väärtustel
+# Ülesanne 4. Normaaljatuse kõver, mis põhineb leitud väärtustel (asenda 'NA'!)
 curve(dnorm(x, mean = mu_hat, sd = s), add = T)
 ```
 
 *** =sct
 ```{r}
-test_object("mu_hat")
-test_object("s")
+test_object("mu_hat", incorrect_msg = "Palun leia muutuja `mu_hat` väärtust kasutades funktsiooni `mean()`.")
+test_object("s", incorrect_msg = "Palun leia muutuja `s` väärtust kasutades funktsiooni `sd()`.")
 
 test_function("dnorm", args = c("mean","sd"))
 
