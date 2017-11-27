@@ -310,13 +310,14 @@ Statistikas tähistatakse tavaliselt hinnanguid katusemärgi (hat) abil. Näitek
 
  *   Ühe kuu temperatuuride vektor on juba loodud. Vaata.
   *  **Ülesanne 1.** Hinda temperatuuride keskväärtust. Kui sa ei mäleta, millist funktsiooni kasutada, siis võid googeldada või kasutada vihjet.
-  *  **Ülesanne 2.** Hinda temperatuuride standardhälvet.
+  *  **Ülesanne 2.** Hinda temperatuuride standardhälvet. Inglise keeles on standardhälve *standard deviation*.
   *  **Ülesanne 3.** Kombineeri mõlemad hinnangud ühte vektorisse (asenda `NA`). Pane ka tähele, kuidas käsus `c()` saab väärtustele anda nimesid.
   *  Väljasta saadud vektori väärtused ümardades neid 2 komakohani, käivitates olemasolevat funktsiooni `round()` (midagi rohkem ei pea sellele lisama).
  
 *** =hint
 
  *   Valimikeskmist saab leida funktsiooni  `mean()` abil.
+ *   Valimi standardhälvet saab leida funktsiooni  `sd()` abil.
 
 *** =pre_exercise_code
 ```{r}
@@ -332,7 +333,7 @@ temperatuur
 mu_hat <- 
   
 # Ülesanne 2. Temperatuuride standardhälbe hinnang:
-sigma_hat <- sd(temperatuur)
+sigma_hat <- 
 
 # Ülesanne 3. Hinnangute kombineerimine vektorisse ja ümardamine:
 hinnangud <- c("mu_hat" = NA, "sigma_hat" = NA)
