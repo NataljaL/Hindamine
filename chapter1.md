@@ -406,7 +406,7 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
 6. Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
 7. Pane ühte vektorisse keskväärtuse hinanngu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
 8. Kirjuta ise käsk, mis väljastab väärtuseid vektorist `hinnangud` ümardatuna ühe komakohani (vihje: `round()`).
-9. 
+9. rhrh
   
 *** =hint
 *  Standardvea valemiks on $\frac{s}{\sqrt{n}}$.
