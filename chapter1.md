@@ -1,6 +1,6 @@
 ---
 title       : Hindamine R-is
-description : siia mingi tekst...
+description : Punkt- ja vahemikhinnangute leidmine R-i abil. Tsükli kirjutamine `for` abil.
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:af3c1cf198
