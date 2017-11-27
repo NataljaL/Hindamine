@@ -94,7 +94,6 @@ nimed[1] <- "Heikki"
 nimed[c(1, 3)]
 
 # Ülesanne 1.
-# Kasuta indekseid ja sulge, et moodustada vektorist nimed kaks vektorit; ära unusta elementide järjekorda!
 tydrukud <-
 
 # Ülesanne 2.
@@ -116,7 +115,6 @@ nimed[1] <- "Heikki"
 nimed[c(1, 3)]
 
 # Ülesanne 1.
-# Kasuta indekseid ja sulge, et moodustada vektorist nimed kaks vektorit; ära unusta elementide järjekorda!
 tydrukud <- nimed[c(3, 4)]
 
 # Ülesanne 2.
