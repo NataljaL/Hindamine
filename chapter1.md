@@ -67,8 +67,8 @@ Indeksite abil on võimalik elementide asukohta vahetada. Uuri järgmises näite
 *** =instructions
 * Loo vektor `nimed` (käsk on juba kirjutatud).
 * Uuri indeksite tööd käivitades näitekäske.
-* Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (samas järjekorras).
-* Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Peeter" and "Heikki" (samas järjekorras).
+* **Ülesanne 1.** Nurksulgude ja vektori `nimed` abil loo uus vektor `tydrukud`, mis sisaldab nimesid "Liisa" ja "Anna" (samas järjekorras).
+* **Ülesanne 2.** Nurksulgude ja vektori `nimed` abil loo uus vektor `poisid`, mis sisaldab nimesid "Peeter" and "Heikki" (samas järjekorras).
 
 *** =hint
 * Pane tähele, et tühikud vektori nime ja nurksulgude vahel võivad tekitada veateateid.
@@ -93,8 +93,11 @@ nimed[1] <- "Heikki"
 # 1. ja 3. element
 nimed[c(1, 3)]
 
+# Ülesanne 1.
 # Kasuta indekseid ja sulge, et moodustada vektorist nimed kaks vektorit; ära unusta elementide järjekorda!
 tydrukud <-
+
+# Ülesanne 2.
 poisid <-
 ```
 
@@ -112,8 +115,11 @@ nimed[1] <- "Heikki"
 # 1. ja 3. element
 nimed[c(1, 3)]
 
+# Ülesanne 1.
 # Kasuta indekseid ja sulge, et moodustada vektorist nimed kaks vektorit; ära unusta elementide järjekorda!
 tydrukud <- nimed[c(3, 4)]
+
+# Ülesanne 2.
 poisid <- nimed[c(2, 1)]
 ```
 
