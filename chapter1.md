@@ -398,14 +398,14 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
 
 *** =instructions
 
-  1.  Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. Uuri, kuidas on leitud valimimaht (läbi selle vektori pikkuse).
-  2.  Leia `mu_hat` (valimikeskmine) (asendades NA)
-  3.  Leia `s` (valimistandardhälve). 
-  4.  Kasutades `mu_hat` ja `s`, leia standardviga (funktsiooni `sqrt()` rakenda ruutjuure leidmiseks).
+  1. Vektor `tulemused` on kättesaadav. See sisaldab 1. kontrolltöö andmeid. Uuri, kuidas on leitud valimimaht (läbi selle vektori pikkuse).
+  2. Leia `mu_hat` (valimikeskmine) (asendades NA)
+  3. Leia `s` (valimistandardhälve). 
+  4. Kasutades `mu_hat` ja `s`, leia standardviga (funktsiooni `sqrt()` rakenda ruutjuure leidmiseks).
   5  Uuri, kuidas on leitud muutuja `z`, mis vastab täiendkvantiili $\bar z_{\alpha/2}$ väärtusele usaldusnivool 99% ($\alpha$ = 0.01).
-  6.  Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
-  7.  Pane ühte vektorisse keskväärtuse hinanngu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
-  8.  Kirjuta ise käsk, mis väljastab väärtuseid vektorist `hinnangud` ümardatuna ühe komakohani (vihje: `round()`).
+  6. Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
+  7. Pane ühte vektorisse keskväärtuse hinanngu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
+  8. Kirjuta ise käsk, mis väljastab väärtuseid vektorist `hinnangud` ümardatuna ühe komakohani (vihje: `round()`).
   
 *** =hint
 *  Standardvea valemiks on $\frac{s}{\sqrt{n}}$.
