@@ -404,7 +404,7 @@ Mõnikord on keeruline aru saada, kust tekib siin normaaljaotus ja millepärast 
 4. Kasutades `mu_hat` ja `s`, leia standardviga (ruutjuure leidmiseks rakenda funktsiooni `sqrt()`).
 5. Uuri, kuidas on leitud muutuja `z`, mis vastab täiendkvantiili $\bar z_{\alpha/2}$ väärtusele usaldusnivool 99% ($\alpha$ = 0.01).
 6. Leia vahemikhinnangu alumine ja ülemine piir ülalpool toodud valemi järgi.
-7. Pane ühte vektorisse keskväärtuse hinanngu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
+7. Pane ühte vektorisse keskväärtuse hinnangu `mu_hat` ning vahemikhinnangu alumise ja ülemise piiri väärtused, asendades `NA`.
 8. Kirjuta ise käsk, mis väljastab väärtuseid vektorist `hinnangud` ümardatuna ühe komakohani (vihje: `round()`).
   
 *** =hint
@@ -515,7 +515,7 @@ Tulemusena saadud jaotus vastabki valimikeskmise jaotusele, mis tähendab, et me
   *  2. Käivita tsükkel `for`. Mida ta teostab?
   *  3. Väljasta keskmiste vektor uuesti.
   *  4. Uuri, mida väljastab käsk `summary()`.
-  *  **Ülesanne 1.** Kirjuta käsk, mis joonestab vektori `keskmised` põhjal histogrammi. KAs meenutab normaaljaotust?
+  *  **Ülesanne 1.** Kirjuta käsk, mis joonestab vektori `keskmised` põhjal histogrammi. Kas meenutab normaaljaotust?
   *  **Ülesanne 2.**Uuri `help`-is, kuidas muuta käsku `hist()` nii, et see väljastaks `y`-teljele sageduste asemel osakaale. Graafiku kuju ei muutu!
 
 *** =hint
